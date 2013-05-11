@@ -19,7 +19,7 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
     },
     submit:function (callback){
 
-      var service ="http://localhost:1984/api/v1/points/create";
+      var service ="http://gcba.dev/api/v1/points/create";
       var newpoint ={};
       $http.post(service, newpoint ).success(function(data) {
          callback();

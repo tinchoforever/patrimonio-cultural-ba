@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="six columns">
  <div class="medium secondary btn">
    <p>
@@ -14,4 +14,27 @@
       Envialo!</a>
       </div>
     </div>
-  </div>
+  </div> -->
+
+
+
+
+<div class="main">
+    <div class="main-header">GCBA</div>
+    <div class="sub-header">ArtMapBA</div>
+
+    <div class="content">
+        <div class="map-container-general">
+            <img ng-src="{{map}}"/></p>
+           <h6>Latitude {{position.coords.latitude}}</h6>
+           <h6>Longitude {{position.coords.longitude}}</h6>
+           <h6>Altitude {{position.coords.altitude}}</h6>
+           <button ng-click="refreshLocation()">Refresh Location</button>
+        </div>
+        <div class="tag-container">
+            <label>Tag</label>
+            <input type="text" class="tag-field" placeholder="#" />
+        </div>
+        <input type="submit" class="submit-btn"  ng-click="submitPoint()" value="ENVIAR!" />
+    </div>
+</div>
