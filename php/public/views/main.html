@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="twelve columns">
+    <ul >
+      <li class="field">
+        <input class="large search input" type="searcg" placeholder="Que obra urbana queres buscar?" ng-model="query">
+        <li>
+        </ul>
+        <ul>
+          <li ng-repeat="point in point | filter:query">
+          <div class="large ">
+
+             <h1> {{point}} </h1>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
