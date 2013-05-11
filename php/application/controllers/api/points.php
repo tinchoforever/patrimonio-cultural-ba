@@ -48,23 +48,29 @@ class Api_Points_Controller extends Base_Controller {
 
     public function get_all()
     {
-        // $data =  array();
-        // for ($i=0; $i < 10; $i++) {
-        //     $data[] = array(
-        //         "latitude"=> 45 + $i*10,
-        //         "longitude"=> -60 + $i*3,
-        //         "picture"=> "http://placekitten.com/200/300",
-        //         "tags" => "nices push bro");
-        // }
+        $data = array();
 
-        // return Response::json($data);
         $buildings = Building::all();
+
         foreach ($buildings as $building) {
-            var_dump($building->photos()->get());
+            $photos = $building->photos()->get();
+            if (count($photos)) {
+                $photo = $photos[0]->file;
+                $photoUrl = (strpos($photo, 'http:') !== false) ? $photo : url('/img/photos/' . $photo);
+
+                $messages = $building->messages()->get();
+                $message = $messages[0]->text;
+
+                $data[] = array(
+                    'latitude' => $building->lat,
+                    'longitude' => $building->lng,
+                    'tags' => $message,
+                    'picture' => $photoUrl
+                );
+            }
         }
-        die();
-        $result = array('data' => array());
-        return Response::json($result);
+
+        return Response::json($data);
     }
 
 }
