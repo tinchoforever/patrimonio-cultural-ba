@@ -54,8 +54,8 @@ class Api_Points_Controller extends Base_Controller {
                 "picture"=> "http://placekitten.com/200/300",
                 "tags" => "nices push bro");
         }
-        $result = array($data);
-        return Response::json($result);
+
+        return Response::json($data);
     }
 
 }

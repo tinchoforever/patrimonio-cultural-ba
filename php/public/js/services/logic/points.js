@@ -11,9 +11,16 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
 .value('version', '0.1')
 .service('points', function ($rootScope, $http, localStorageService, $resource) {
   return {
+    points: [],
     getall:function (successCallback)
     {
-      $http.get("/api/v1/points/all").success(successCallback);
+        self = this;
+      $http.get("/api/v1/points/all").success(function(data){
+        self.points = data;
+        console.log(data);
+        successCallback(data);
+
+      });
    }
  };
 });

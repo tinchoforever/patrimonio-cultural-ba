@@ -7,7 +7,22 @@ initApp.controller('mainController', function ($scope, localStorageService,point
 
    points.getall(function(points){
         $scope.points = points;
-        $scope.markersProperty
+        var markers =[];
+        for(var i=0; i < points.length; i++){
+            markers.push(
+            {
+                latitude: points[i].latitude,
+                longitude: points[i].longitude,
+
+            });
+        }
+        console.log(markers);
+        $scope.markersProperty = markers;
+        $scope.zoomProperty = 12;
+        $scope.centerProperty= {
+            latitude: -34.603723,
+            longitude: -58.381593};
+
     });
 
    angular.extend($scope, {
