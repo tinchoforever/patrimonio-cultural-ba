@@ -2,6 +2,8 @@
 
 class Building extends Eloquent
 {
+    public static $timestamps = false;
+
     public function photos()
     {
         return $this->has_many('Photo');
