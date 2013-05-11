@@ -73,7 +73,7 @@ h4 { font-size: 26px; font-size: 1.625rem; }
 
 h5 { font-size: 18px; font-size: 1.125rem; }
 
-h6 { font-size: 16px; font-size: 1rem; }
+h6 { font-size: 18px; font-size: 1rem; font-family: Arial; margin: 10px 0 0 60px!important;}
 
 @media only screen and (max-width: 767px) { h1 { font-size: 42px; font-size: 2.625rem; }
   h2 { font-size: 36px; font-size: 2.25rem; } }
@@ -452,8 +452,14 @@ img { -ms-interpolation-mode: bicubic; }
 .btn.primary, .skiplink.primary { background: #3085d6; border: 1px solid #3085d6; }
 .btn.primary:hover, .skiplink.primary:hover { background: #5b9ede; }
 .btn.primary:active, .skiplink.primary:active { background: #236bb0; }
-.btn.secondary, .skiplink.secondary { background: #42a35a; border: 1px solid #42a35a; }
-.btn.secondary:hover, .skiplink.secondary:hover { background: #5bbd73; }
+.btn.secondary, .skiplink.secondary { background: #000; border: 1px solid #000; text-transform: uppercase; font-family: Arial; margin: 20px; }
+.btn.secondary:hover, .skiplink.secondary:hover { background: ##ffd504; color: black; }
+.skiplink.secondary:hover {
+  background: ##ffd504; color: black; 
+} 
+.btn.secondary:hover {
+  background: ##ffd504; color: black; 
+}
 .btn.secondary:active, .skiplink.secondary:active { background: #337f46; }
 .btn.default, .skiplink.default { background: #f2f2f2; border: 1px solid #f2f2f2; color: #555555; border: 1px solid #f2f2f2; }
 .btn.default:hover, .skiplink.default:hover { background: white; }
