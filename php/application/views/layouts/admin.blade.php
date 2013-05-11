@@ -19,6 +19,9 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <script src="js/frameworks/zepto.min.js"></script>
+
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link rel="stylesheet" href="css/frameworks/gumby.css">
   <link rel="stylesheet" href="css/base.css">
@@ -49,6 +52,8 @@
 
   <script src="js/frameworks/angular.min.js"></script>
   <script src="js/frameworks/angular-resource.js"></script>
+  <script src="js/frameworks/angular-google-maps.js"></script>
+
   <script src="js/libs/moment.min.js"></script>
 
   <script src="js/controllers/main.js"></script>
