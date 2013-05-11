@@ -8,14 +8,15 @@ class Api_Points_Controller extends Base_Controller {
     {
         $uploaddir = path('public') . 'img/photos/';
 
+        $pointnew = Input::json();
         $building = new Building();
-        $building->lat = Input::get('latitude');
-        $building->lng = Input::get('longitude');
+        $building->lat = $pointnew->latitude;
+        $building->lng = $pointnew->longitude;
         $building->save();
 
         $photo = new Photo();
         $photo->bid = $building->id;
-        $file64 = Input::get('photo');
+        $file64 = $pointnew->photo;
         $img = str_replace('data:image/png;base64,', '', $file64);
         $img = str_replace(' ', '+', $img);
         $data = base64_decode($img);
@@ -27,7 +28,7 @@ class Api_Points_Controller extends Base_Controller {
 
             $message = new Message();
             $message->bid = $building->id;
-            $message->text = Input::get('tag');
+            $message->text = $pointnew->tag;
 
             $response = array(
                 'success' => true,
@@ -45,8 +46,16 @@ class Api_Points_Controller extends Base_Controller {
 
     public function get_all()
     {
-        $result = array('data' => array());
-        return Response::json($result);
+        $data =  array();
+        for ($i=0; $i < 10; $i++) {
+            $data[] = array(
+                "latitude"=> 45 + $i*10,
+                "longitude"=> -60 + $i*3,
+                "picture"=> "http://placekitten.com/200/300",
+                "tags" => "nices push bro");
+        }
+
+        return Response::json($data);
     }
 
 }

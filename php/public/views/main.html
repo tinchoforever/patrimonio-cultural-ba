@@ -4,16 +4,18 @@
       <li class="field">
         <input class="large search input" type="searcg" placeholder="Que obra urbana queres buscar?" ng-model="query">
         <li>
-         <div class="google-map"
-    center="centerProperty"
-    zoom="zoomProperty"
-    markers="markersProperty"
-    latitude="clickedLatitudeProperty"
-    longitude="clickedLongitudeProperty"
-    mark-click="true"
-    draggable="true"
-    style="height: 1000px; width: 100%">
-  </div>
+             <div class="google-map"
+        center="centerProperty"
+        zoom="zoomProperty"
+        markers="markersProperty"
+        latitude="clickedLatitudeProperty"
+        longitude="clickedLongitudeProperty"
+        mark-click="true"
+        draggable="true"
+        zoom="true"
+        style="height: 1000px; width: 100%"
+        zoom-control="true">
+      </div>
         </ul>
         <ul>
           <li ng-repeat="point in point | filter:query">
