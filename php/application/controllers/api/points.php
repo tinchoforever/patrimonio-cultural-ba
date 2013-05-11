@@ -15,7 +15,7 @@ class Api_Points_Controller extends Base_Controller {
  public function get_all(){
 
 
-  $result = array();
+  $result = array('data' => array());
 
   return Response::json($result);
 
