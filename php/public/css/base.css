@@ -1,0 +1,8 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+.slide-enter-setup {
+    -webkit-transform: translateX(-100%);
+    background: red;
+}
+
+.logo h3 {color:#FFFFFF;}
+.picture {max-width: 300px; max-height: 300px;}
