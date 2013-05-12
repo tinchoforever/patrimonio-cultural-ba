@@ -1,26 +1,19 @@
-<!--
-<div class="six columns">
- <div class="medium secondary btn">
-   <p>
-     <img ng-src="{{map}}"/></p>
-     <h6>Latitude {{position.coords.latitude}}</h6>
-     <h6>Longitude {{position.coords.longitude}}</h6>
-     <h6>Altitude {{position.coords.altitude}}</h6>
-     <div class="medium primary btn">
-       <a href="" ng-click="refreshLocation()">Refresh Location</a>
-     </div>
-     <div class="medium secondary btn">
-       <a href="javascript:void(0)" ng-click="submitPoint()" >
-      Envialo!</a>
-      </div>
+<div class="content preview-photo">
+	<div class="picture-container">
+		<img class="photo" ng-src="{{photo}}"/>
+		<div class="picture-bottom">
+			<h3 class="caption">
+				Describi la Obra
+			</h3>
+		</div>
+	</div>
+	<div class="tag-photo">
+        <h1 >Describi con palabras claves el<br />
+		punto que va a agregar. </h1>
+        <input type="text" ng-model="tag" class="tag-field" placeholder="#" />
+	</div>
+	<div class="bottom-buttons">
+	   <div class="big-button art"></div>
+       <a class="next-button" href="" ng-click="submitPoint()"><span class="caption">Siguiente</span><span class="arrow"></span></a>
     </div>
-  </div> -->
-    <div class="content">
-        <h1 class="copy-txt big-title point"> De que se trata la obra? </h1>
-        <p class="copy-txt"> Describi con palabras claves el punto que vas a agregar </p>
-         <div class="tag-container">
-            <input type="text" ng-model="tag" class="tag-field" placeholder="#" />
-        </div>
-        <input type="submit" ng-hide="wait" class="submit-btn"  ng-click="submitPoint()" value="Enviar" />
-        <div class="loading" ng-show="wait"></div>
-    </div>
+</div>

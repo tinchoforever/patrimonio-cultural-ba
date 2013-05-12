@@ -306,12 +306,49 @@ a,input {
 
 /* TAKE PHOTO */
 
-.preview-photo > img{
+.preview-photo .photo{
 	display:block;
-	max-height:840px;
+	max-height:420px;
 	width:100%;
 }
 
+.preview-photo .picture-container{
+	position:relative;
+}
+
+.preview-photo .picture-container .picture-bottom{
+	bottom:0;
+	left:0;
+	position:absolute;
+	width:100%;
+}
+.preview-photo .picture-container .picture-bottom .caption{
+	background:rgba(0,0,0,0.8);
+	color:#FFF;
+	font-size:23px;
+	font-weight:bold;
+	padding:20px;
+}
+.tag-photo{
+	background:#000;
+	padding:25px;
+}
+.tag-photo h1{
+	color:#FFF;
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:18px;
+}
+.tag-photo input[type="text"]{
+	background:#FFF;
+	border:none;
+	color:#FFD200;
+	font-family:Helvetica;
+	font-size:35px;
+	height:45px;
+	padding:10px;
+	width:100%;
+}
 .bottom-buttons{
 	background:#ffd512;
 	height:75px;
@@ -331,6 +368,10 @@ a,input {
 
 .bottom-buttons .big-button.photo{
 	background-image:url("../img/photo.png");
+}
+
+.bottom-buttons .big-button.art{
+	background-image:url("../img/art.png");
 }
 
 .bottom-buttons .next-button{
