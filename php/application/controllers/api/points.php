@@ -80,7 +80,7 @@ class Api_Points_Controller extends Base_Controller {
                     'latitude' => $building->lat,
                     'longitude' => $building->lng,
                     'tags' => $building->category,
-                    'name' => $building->session_name(),
+                    'name' => $building->name,
                     'picture' => $building->photo
                 );
         }
