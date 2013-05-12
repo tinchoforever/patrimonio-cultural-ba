@@ -14,9 +14,6 @@
   <link rel="stylesheet" href="css/frameworks/gumby.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/styles-ui.css">
-
-
-
 </head>
 <body ng-app="initApp">
   <div class="pretty navbar" gumby-fixed="top" id="nav3">
@@ -40,7 +37,12 @@
     </div>
   </div>
   <div class="main">
-      <div class="main-header">Buenos Aires Ciudad</div>
+      <div class="main-header">
+          <h1 id="logo">Buenos Aires Ciudad</h1>
+          <a href="#" class="menu-trigger">
+
+          </a>
+      </div>
       <div class="sub-header">ArtMapBA</div>
       <!-- Add your site or application content here -->
       <div class="container" ng-view ng-animate="{enter: 'fadein-right-big'}">

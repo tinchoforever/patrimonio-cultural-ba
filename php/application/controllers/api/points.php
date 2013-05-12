@@ -25,10 +25,12 @@ class Api_Points_Controller extends Base_Controller {
 
         if ($success) {
             $photo->file = $file;
+            $photo->save();
 
             $message = new Message();
             $message->bid = $building->id;
             $message->text = $pointnew->tag;
+            $message->save();
 
             $response = array(
                 'success' => true,
@@ -46,13 +48,26 @@ class Api_Points_Controller extends Base_Controller {
 
     public function get_all()
     {
-        $data =  array();
-        for ($i=0; $i < 10; $i++) {
-            $data[] = array(
-                "latitude"=> 45 + $i*10,
-                "longitude"=> -60 + $i*3,
-                "picture"=> "http://placekitten.com/200/300",
-                "tags" => "nices push bro");
+        $data = array();
+
+        $buildings = Building::all();
+
+        foreach ($buildings as $building) {
+            $photos = $building->photos()->get();
+            if (count($photos)) {
+                $photo = $photos[0]->file;
+                $photoUrl = (strpos($photo, 'http:') !== false) ? $photo : url('/img/photos/' . $photo);
+
+                $messages = $building->messages()->get();
+                $message = $messages[0]->text;
+
+                $data[] = array(
+                    'latitude' => $building->lat,
+                    'longitude' => $building->lng,
+                    'tags' => $message,
+                    'picture' => $photoUrl
+                );
+            }
         }
 
         return Response::json($data);

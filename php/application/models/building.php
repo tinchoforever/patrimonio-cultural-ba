@@ -6,11 +6,11 @@ class Building extends Eloquent
 
     public function photos()
     {
-        return $this->has_many('Photo');
+        return $this->has_many('Photo', 'bid');
     }
 
     public function messages()
     {
-        return $this->has_many('Message');
+        return $this->has_many('Message', 'bid');
     }
 }
