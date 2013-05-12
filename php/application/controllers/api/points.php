@@ -52,13 +52,15 @@ class Api_Points_Controller extends Base_Controller {
 
         if ($ll = Input::get('ll')) {
             $ll = explode(',', $ll);
-            $minLat = $ll[0] - 1;
-            $maxLat = $ll[0] + 1;
-            $minLng = $ll[1] - 1;
-            $maxLng = $ll[1] + 1;
+            // Latitude: 1 deg = 110.54 km
+            // Longitude: 1 deg = 111.320*cos(latitude) km
+            $oneKMDiffLat = 1 / 110.54;
+            $oneKMDiffLng = 1 / (111.32 * cos($ll[0]));
+            $minLat = $ll[0] - $oneKMDiffLat;
+            $maxLat = $ll[0] + $oneKMDiffLat;
+            $minLng = $ll[1] - $oneKMDiffLng;
+            $maxLng = $ll[1] + $oneKMDiffLng;
             $buildings = Building::where_between('lat', $minLat, $maxLat)->where_between('lng', $minLng, $maxLng)->get();
-            var_dump($buildings);
-            die();
         } else {
             $buildings = Building::all();
         }
