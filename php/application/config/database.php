@@ -69,10 +69,10 @@ return array(
 
 		'mysql' => array(
 			'driver'   => 'mysql',
-			'host'     => '50.23.201.238',
-			'database' => 'elauriac_patrimonio',
-			'username' => 'elauriac_patri',
-			'password' => 'patrimonio',
+			'host'     => 'localhost',
+			'database' => 'patrimonio-publico',
+			'username' => 'root',
+			'password' => 'root',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 		),
