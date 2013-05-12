@@ -1,0 +1,25 @@
+<!--
+<div class="six columns">
+ <div class="medium secondary btn">
+   <p>
+     <img ng-src="{{map}}"/></p>
+     <h6>Latitude {{position.coords.latitude}}</h6>
+     <h6>Longitude {{position.coords.longitude}}</h6>
+     <h6>Altitude {{position.coords.altitude}}</h6>
+     <div class="medium primary btn">
+       <a href="" ng-click="refreshLocation()">Refresh Location</a>
+     </div>
+     <div class="medium secondary btn">
+       <a href="javascript:void(0)" ng-click="submitPoint()" >
+      Envialo!</a>
+      </div>
+    </div>
+  </div> -->
+    <div class="content">
+        <h1> De que se trata la obra? </h1>
+        <p> Describi con palabras claves el punto que vas a agregar </p>
+         <div class="tag-container">
+            <input type="text" ng-model="tag" class="tag-field" placeholder="#" />
+        </div>
+        <input type="submit" class="submit-btn"  ng-click="submitPoint()" value="Enviar" />
+    </div>

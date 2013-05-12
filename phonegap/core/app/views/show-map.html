@@ -1,31 +1,13 @@
-<!--
-<div class="six columns">
- <div class="medium secondary btn">
-   <p>
-     <img ng-src="{{map}}"/></p>
-     <h6>Latitude {{position.coords.latitude}}</h6>
-     <h6>Longitude {{position.coords.longitude}}</h6>
-     <h6>Altitude {{position.coords.altitude}}</h6>
-     <div class="medium primary btn">
-       <a href="" ng-click="refreshLocation()">Refresh Location</a>
-     </div>
-     <div class="medium secondary btn">
-       <a href="javascript:void(0)" ng-click="submitPoint()" >
-      Envialo!</a>
-      </div>
+  <div class="content">
+
+    <h1> Donde esta esta obra?</h1>
+    <div class="map-container-general">
+      <img ng-src="{{map}}"/></p>
+      <button ng-click="refreshLocation()" class="submit-btn">Refrescar mapa</button>
+        <a href="" class="submit-btn" onclick="window.location.hash='/tag'">Siguiente -></a>
+
     </div>
-  </div> -->
-    <div class="content">
-        <div class="map-container-general">
-          <img ng-src="{{map}}"/></p>
-           <h6>Latitude {{position.coords.latitude}}</h6>
-           <h6>Longitude {{position.coords.longitude}}</h6>
-           <h6>Altitude {{position.coords.altitude}}</h6>
-           <button ng-click="refreshLocation()" class="submit-btn">Refresh Location</button>
-        </div>
-        <div class="tag-container">
-            <label>Tag</label>
-            <input type="text" class="tag-field" placeholder="#" />
-        </div>
-        <input type="submit" class="submit-btn"  ng-click="submitPoint()" value="ENVIAR!" />
-    </div>
+
+
+
+ </div>

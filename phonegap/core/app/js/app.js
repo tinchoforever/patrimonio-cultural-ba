@@ -15,6 +15,10 @@
       templateUrl: 'views/show-map.html',
       controller: 'pointController'
     })
+     .when('/tag', {
+      templateUrl: 'views/tag-point.html',
+      controller: 'pointController'
+    })
     .when('/finish', {
       templateUrl: 'views/finish.html',
       controller: 'pointController'

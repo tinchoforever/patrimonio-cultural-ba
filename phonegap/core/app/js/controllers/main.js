@@ -21,9 +21,11 @@ initApp.controller('pointController', function ($scope, geolocation, camera, dev
   });
 };
 
+
+
 $scope.submitPoint = function() {
+  points.setTag($scope.tag);
   points.submit(function(){
-    alert("YES!");
     window.location ="/#/finish";
   });
 };

@@ -11,6 +11,10 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
   return {
     photo: '',
     location: {},
+    tag: '',
+     setTag: function (tag) {
+      this.tag = tag;
+    },
     setLocation: function (location) {
       this.location = location;
     },
@@ -36,7 +40,7 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
       var newpoint ={ photo: this.photo,
         latitude:  this.location.latitude,
         longitude : this.location.longitude,
-        tag : ""};
+        tag :this.tag};
       $http.post(service, newpoint ).success(function(data) {
          callback();
       });

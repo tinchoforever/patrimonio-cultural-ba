@@ -22,7 +22,6 @@ initApp.controller('mainController', function ($scope, localStorageService,point
         $scope.centerProperty= {
             latitude: -34.603723,
             longitude: -58.381593};
-
     });
 
    angular.extend($scope, {
