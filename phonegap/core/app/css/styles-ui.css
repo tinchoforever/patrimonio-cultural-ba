@@ -304,24 +304,55 @@ a,input {
 
 /*Photo info END*/
 
+/* TAKE PHOTO */
 
+.preview-photo > img{
+	display:block;
+	max-height:840px;
+	width:100%;
+}
 
+.bottom-buttons{
+	background:#ffd512;
+	height:75px;
+	overflow:hidden;
+}
 
+.bottom-buttons .big-button{
+	background-color:#1e1e1e;
+	background-position:center center;
+	background-size:100%;
+	display:block;
+	float:left;
+	font-size:0;
+	height:75px;
+	width:108px;
+}
 
+.bottom-buttons .big-button.photo{
+	background-image:url("../img/photo.png");
+}
 
+.bottom-buttons .next-button{
+	float:right;
+	margin-right:22px;
+	margin-top:30px;
+}
 
+.bottom-buttons .next-button .caption{
+	color:#1e1e1e;
+	float:left;
+	font-size:18.5px;
+	font-weight:bold;
+	line-height:15px;
+	text-decoration:none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.bottom-buttons .next-button .arrow{
+	background-image:url("../img/arrow.png");
+	background-size:100%;
+	float:right;
+	margin-left:16px;
+	height:16px;
+	width:10.5px;
+}
