@@ -20,7 +20,8 @@
   <meta name="viewport" content="width=device-width">
   <script src="js/frameworks/zepto.min.js"></script>
 
-  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;language=en"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link rel="stylesheet" href="css/frameworks/gumby.css">
@@ -30,7 +31,7 @@
 
 </head>
 <body ng-app="App">
-  <div class="pretty navbar" gumby-fixed="top" id="nav3">
+  <div class="metro navbar" gumby-fixed="top" id="nav3">
     <div class="row">
       <a class="toggle" gumby-trigger="#nav3 &gt; .row &gt; ul" href="#"><i class="icon-menu"></i></a>
       <h1 class="four columns logo">
@@ -39,6 +40,8 @@
         </a>
       </h1>
       <ul class="eight columns">
+        <li><a href="#/">Mapa</a></li>
+        <li><a href="#/gallery">Galer&iacute;a</a></li>
       </ul>
     </div>
   </div>
@@ -55,6 +58,8 @@
   <script src="js/frameworks/angular-google-maps.js"></script>
 
   <script src="js/libs/moment.min.js"></script>
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="js/libs/gumby.min.js"></script>
 
   <script src="js/controllers/main.js"></script>
   <script src="js/controllers/list.js"></script>
