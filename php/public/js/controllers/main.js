@@ -1,30 +1,8 @@
 'use strict';
-var initApp = angular.module('initApp.controllers',  ['google-maps', 'LocalStorageModule']);
+angular.module('App.controllers',  ['google-maps', 'LocalStorageModule', 'App.services'])
+.controller('main', ['$scope', 'localStorageService', 'points', function ($scope, localStorageService, points) {
 
-initApp.controller('mainController', function ($scope, localStorageService,points ) {
-
-
-
-   points.getall(function(points){
-        $scope.points = points;
-        var markers =[];
-        for(var i=0; i < points.length; i++){
-            markers.push(
-            {
-                latitude: points[i].latitude,
-                longitude: points[i].longitude,
-
-            });
-        }
-        console.log(markers);
-        $scope.markersProperty = markers;
-        $scope.zoomProperty = 12;
-        $scope.centerProperty= {
-            latitude: -34.603723,
-            longitude: -58.381593};
-    });
-
-   angular.extend($scope, {
+    angular.extend($scope, {
 
         /** the initial center of the map */
         centerProperty: {
@@ -50,4 +28,12 @@ initApp.controller('mainController', function ($scope, localStorageService,point
         clickedLongitudeProperty: null,
     });
 
-});
+    points.getall(function(markers){
+        $scope.markersProperty = markers;
+        $scope.centerProperty = {
+            latitude: -34.603723,
+            longitude: -58.381593
+        };
+    });
+
+}]);
