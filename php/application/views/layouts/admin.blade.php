@@ -57,6 +57,7 @@
   <script src="js/libs/moment.min.js"></script>
 
   <script src="js/controllers/main.js"></script>
+  <script src="js/controllers/list.js"></script>
   <script src="js/services/libs/localStorage.js"></script>
   <script src="js/services/logic/points.js"></script>
 

@@ -8,6 +8,10 @@
       templateUrl: 'views/main.html',
       controller: 'mainController'
     })
+    .when('/gallery', {
+      templateUrl: 'views/art-list.html',
+      controller: 'listController'
+    })
     .otherwise({
       redirectTo: '/'
     });
