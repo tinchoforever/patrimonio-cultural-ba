@@ -12,11 +12,11 @@ body {
 }
 
 .finish-copy {
-	margin: 20px 0 20px 52px;
+	margin: 20px 0 20px 20px;
 	color: black;
 	font-weight: bold;
 	font-family: Helvetica, Arial;
-	font-size: 32px;
+	font-size: 24px;
 }
 
 .submit-btn {
@@ -29,6 +29,10 @@ body {
 	margin: 15px 0;
 	margin-left: 60px;
 	font-family: Helvetica, Arial;
+}
+
+.submit-btn.finish-btn {
+	margin-left: 27px;
 }
 
 .copy-txt {
@@ -161,9 +165,7 @@ body {
 	background-color: white;
 	width: 260px;
 	height: 50px;
-	padding: 14px;
-	margin-left: 10px;
-	color: black;
+	padding: 14px;	color: black;
 	font-size: 17px;
 	font-family: Arial;
 }
@@ -175,7 +177,7 @@ body {
 	font-size: 18px;
 	border: 0;
 	margin: 15px 0;
-	margin-left: 25px;
+	margin-left: 15px;
 }
 /*General Map END*/
 
