@@ -75,11 +75,32 @@ class Api_Points_Controller extends Base_Controller {
 
 
             // }
+            $lng = -34.58514;
+            $lng = -58.38922;
+
+            if(substr($building->lat, 0, 2) == '-58')
+            {
+                $lng = $building->lat;
+            }
+            else{
+                $lng = $building->lng;
+            }
+
+
+            if(substr($building->lng, 0, 2) == '-34')
+            {
+                $lat = $building->lng;
+            }
+            else{
+                $lat = $building->lat;
+            }
+
+
              $data[] = array(
-                    'latitude' => $building->lat,
-                    'longitude' => $building->lng,
+                    'latitude' => $lat,
+                    'longitude' => $lng,
                     'tags' => $building->category,
-                    'name' => $building->name,
+                    'name' => $building->session_name(),
                     'picture' => $building->photo
                 );
         }

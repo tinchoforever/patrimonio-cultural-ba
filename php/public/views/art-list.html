@@ -7,7 +7,8 @@
         <ul>
           <li ng-repeat="point in points | filter:query">
           <div class="large ">
-             <h3> {{point.tags}} </h3>
+            <h3> {{point.name}}</h3>
+             <h6> {{point.tags}} </h6>
              <img ng-src={{point.map}}>
              <img class="picture" ng-src={{point.picture}}>
           </div>
