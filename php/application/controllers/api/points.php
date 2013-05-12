@@ -50,7 +50,18 @@ class Api_Points_Controller extends Base_Controller {
     {
         $data = array();
 
-        $buildings = Building::all();
+        if ($ll = Input::get('ll')) {
+            $ll = explode(',', $ll);
+            $minLat = $ll[0] - 1;
+            $maxLat = $ll[0] + 1;
+            $minLng = $ll[1] - 1;
+            $maxLng = $ll[1] + 1;
+            $buildings = Building::where_between('lat', $minLat, $maxLat)->where_between('lng', $minLng, $maxLng)->get();
+            var_dump($buildings);
+            die();
+        } else {
+            $buildings = Building::all();
+        }
 
         foreach ($buildings as $building) {
             $photos = $building->photos()->get();

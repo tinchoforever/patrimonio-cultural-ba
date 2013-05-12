@@ -13,8 +13,8 @@ class Create_Buildings_Table {
             $table->create();
             $table->increments('id');
             $table->string('name');
-            $table->string('lat');
-            $table->string('lng');
+            $table->decimal('lat', 24, 20);
+            $table->decimal('lng', 24, 20);
         });
 	}
 
