@@ -4,6 +4,19 @@
     <a href="/" > Empear de nuevo!</a>
   </div></p> -->
 <div class="content">
-    <h1 class="finish-copy"> Terminaste!!! Ahora...</h1>                
-    <button class="submit-btn finish-btn" onclick="window.location='/'">VOLVER A EMPEZAR</button>
+    <div class="fin-module">
+		<div class="fin-txt"></div>
+		<p>Muchas Gracias!</p>
+		<span>Tu foto fue enviada exitosamente y sera visible en las proximas 24 hs.</span>
+	</div>
+
+ 	<img class="finish-photo" ng-src="{{photo}}"/>
+
+    <div class="content-buttons">
+        <button class="menu-button take-pic" onclick="window.location.hash='/map'">Descubri</button>
+        <button class="menu-button see-map" onclick="window.location='/'">Agrega</button>
+    </div>
+
+
+
 </div>

@@ -31,6 +31,12 @@ a,input {
 	font-weight: bold;
 	font-family: Helvetica, Arial;
 	font-size: 24px;
+	position: absolute;
+}
+
+.finish-photo {
+	max-width: 100%;
+	min-height: 100%;
 }
 
 .submit-btn {
@@ -127,8 +133,12 @@ a,input {
 .main .content .bg-last-pic {
 	background: url(../img/img-ppal.jpg) no-repeat;
 	width: 100%;
-	height: 360px;
+	height: 357px;
 	position: relative;
+}
+
+.main .content .bg-last-pic.finish-pic {
+	background: none;
 }
 
 .main .content .bg-last-pic .welcome-txt{
@@ -136,7 +146,7 @@ a,input {
 	opacity: .5;
 	padding: 23px;
 	position: absolute;
-	bottom: 3px;
+	bottom: 0;
 	padding-right: 40px;
 	width: 100%;
 	height: 120px;
@@ -159,30 +169,37 @@ a,input {
 .main .content .content-buttons {
 	width: 100%;
 	margin: 0 auto;
-	margin-top: 60px;
+	position: absolute;
+	top: 402px;
 }
 
 .main .content .content-buttons .menu-button{
 	width: 50%;
-	height: 40px;
+	height: 166px;
 	text-align: center;
-	font-size: 18px;
-	text-transform: uppercase;
+	font-size: 13px;
 	background-color: #1e1e1e;
 	border: 0;
-	margin-bottom: 20px;
 	color: white;
 	cursor: pointer;
 	font-family: Arial;
 	float: left;
-}
-
-.main .content .content-buttons .menu-button.take-pic{
+	background-position: 50% 45%;
+	padding-top: 100px;
 }
 
 .main .content .content-buttons .menu-button.see-map{
 	background-color: #ffd512;
 	color: black;
+	background-image: url(../img/ico-menu-camera.png);
+	background-repeat: no-repeat;
+}
+
+.main .content .content-buttons .menu-button.take-pic{
+	
+	background-image: url(../img/ico-menu-descubri.png);
+	background-repeat: no-repeat;
+	color: #ffd512;
 }
 
 /*Home menu END*/
@@ -235,6 +252,52 @@ a,input {
 
 /*--------///-----------*/
 
+
+.main .content .fin-module {
+}
+
+.main .content .fin-module.finish-pic {
+	background: none;
+}
+
+.main .content .fin-module .fin-txt{
+	background: #000;
+	opacity: .5;
+	padding: 23px;
+	position: absolute;
+	bottom: 238px;
+	padding-right: 40px;
+	width: 100%;
+	height: 120px;
+}
+
+.main .content .fin-module p {
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 26px;
+	opacity: 1;
+	position: absolute;
+	z-index: 10;
+	bottom: 315px;
+	width: 230px;
+	left: 30px;
+}
+
+.main .content .fin-module span {
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 17px;
+	opacity: 1;
+	position: absolute;
+	z-index: 10;
+	bottom: 267px;
+	width: 246px;
+	left: 30px;
+}
 
 
 /*Photo info BEGIN*/

@@ -29,7 +29,7 @@
 
 
 </head>
-<body ng-app="App">
+<body ng-app="initApp">
   <div class="pretty navbar" gumby-fixed="top" id="nav3">
     <div class="row">
       <a class="toggle" gumby-trigger="#nav3 &gt; .row &gt; ul" href="#"><i class="icon-menu"></i></a>

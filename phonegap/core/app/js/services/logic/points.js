@@ -35,9 +35,8 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
      ctx.drawImage(img, 0, 0);
 
      var dataURL = canvas.toDataURL("image/png");
-     this.photo = dataURL;
-     console.log(this.photo);
-      var newpoint ={ photo: this.photo,
+    
+      var newpoint ={ photo:dataURL,
         latitude:  this.location.latitude,
         longitude : this.location.longitude,
         tag :this.tag};
