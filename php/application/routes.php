@@ -37,6 +37,8 @@ Route::get('/', array('as' => 'home', 'uses' => 'home@index'));
 
 Route::get('api/v1/points/all', array('as' => 'api.points', 'uses' => 'api.points@all'));
 Route::any('api/v1/points/create/(:any?)', array('as' => 'api.points', 'uses' => 'api.points@create'));
+Route::any('api/v1/points/upload/(:any?)', array('as' => 'api.points', 'uses' => 'api.points@upload'));
+
 
 /*
 |--------------------------------------------------------------------------

@@ -50,36 +50,38 @@ class Api_Points_Controller extends Base_Controller {
     {
         $data = array();
 
-        if ($ll = Input::get('ll')) {
-            $ll = explode(',', $ll);
-            // Latitude: 1 deg = 110.54 km
-            // Longitude: 1 deg = 111.320*cos(latitude) km
-            $oneKMDiffLat = 1 / 110.54;
-            $oneKMDiffLng = 1 / (111.32 * cos($ll[0]));
-            $minLat = $ll[0] - $oneKMDiffLat;
-            $maxLat = $ll[0] + $oneKMDiffLat;
-            $minLng = $ll[1] - $oneKMDiffLng;
-            $maxLng = $ll[1] + $oneKMDiffLng;
-            $buildings = Building::where_between('lat', $minLat, $maxLat)->where_between('lng', $minLng, $maxLng)->get();
-        } else {
-            $buildings = Building::all();
-        }
+        // if ($ll = Input::get('ll')) {
+        //     $ll = explode(',', $ll);
+        //     // Latitude: 1 deg = 110.54 km
+        //     // Longitude: 1 deg = 111.320*cos(latitude) km
+        //     $oneKMDiffLat = 1 / 110.54;
+        //     $oneKMDiffLng = 1 / (111.32 * cos($ll[0]));
+        //     $minLat = $ll[0] - $oneKMDiffLat;
+        //     $maxLat = $ll[0] + $oneKMDiffLat;
+        //     $minLng = $ll[1] - $oneKMDiffLng;
+        //     $maxLng = $ll[1] + $oneKMDiffLng;
+        //     $buildings = Building::where_between('lat', $minLat, $maxLat)->where_between('lng', $minLng, $maxLng)->get();
+        // } else {
+        $buildings = Building::all();
+        // }
 
         foreach ($buildings as $building) {
-            $photos = $building->photos()->get();
-            if (count($photos)) {
-                $photo = $photos[0]->file;
-                $photoUrl = (strpos($photo, 'http:') !== false) ? $photo : url('/../img/photos/' . $photo);
-                $messages = $building->messages()->get();
-                $message = $messages[0]->text;
+            // $photos = $building->photos()->get();
+            // if (count($photos)) {
+            //     $photo = $photos[0]->file;
+            //     $photoUrl = (strpos($photo, 'http:') !== false) ? $photo : url('/../img/photos/' . $photo);
+            //     $messages = $building->messages()->get();
+            //     $message = $messages[0]->text;
 
-                $data[] = array(
+
+            // }
+             $data[] = array(
                     'latitude' => $building->lat,
                     'longitude' => $building->lng,
-                    'tags' => $message,
-                    'picture' => $photoUrl
+                    'tags' => $building->category,
+                    'name' => $building->name,
+                    'picture' => $building->photo
                 );
-            }
         }
 
         return Response::json($data);
