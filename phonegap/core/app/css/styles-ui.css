@@ -159,11 +159,13 @@ body {
 .main .content .tag-container input[type="text"].tag-field {
 	border: 1px solid #CCC;
 	background-color: white;
-	width: 200px;
-	height: 30px;
-	padding: 4px;
+	width: 260px;
+	height: 50px;
+	padding: 14px;
 	margin-left: 10px;
 	color: black;
+	font-size: 17px;
+	font-family: Arial;
 }
 
 .main .content input[type="submit"].submit-btn {
