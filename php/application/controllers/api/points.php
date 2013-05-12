@@ -57,7 +57,6 @@ class Api_Points_Controller extends Base_Controller {
             if (count($photos)) {
                 $photo = $photos[0]->file;
                 $photoUrl = (strpos($photo, 'http:') !== false) ? $photo : url('/../img/photos/' . $photo);
-
                 $messages = $building->messages()->get();
                 $message = $messages[0]->text;
 
