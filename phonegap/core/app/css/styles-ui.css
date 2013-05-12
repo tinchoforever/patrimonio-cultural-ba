@@ -18,6 +18,13 @@ a,input {
 	         border-radius: 0;
 }
 
+.loading {
+	background: url(../img/ico-loading.gif) no-repeat;
+	width: 31px;
+	height: 31px;
+	margin: 0 auto;
+}
+
 .finish-copy {
 	margin: 20px 0 20px 20px;
 	color: black;
