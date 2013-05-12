@@ -13,6 +13,9 @@ body {
 
 a,input {
 	 -webkit-appearance: none;
+	 -webkit-border-radius: 0;
+	    -moz-border-radius: 0;
+	         border-radius: 0;
 }
 
 .finish-copy {
