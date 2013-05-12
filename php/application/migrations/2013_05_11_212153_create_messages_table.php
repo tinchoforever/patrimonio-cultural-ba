@@ -11,6 +11,7 @@ class Create_Messages_Table {
 	{
 		Schema::table('messages', function($table) {
             $table->create();
+            $table->increments('id');
             $table->integer('bid');
             $table->text('text');
         });
