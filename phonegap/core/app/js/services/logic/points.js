@@ -23,7 +23,7 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
     },
     submit:function (callback){
 
-      var service ="http://gcba.dev/api/v1/points/create";
+      var service ="http://patrimonio-cultural.elauria.com/api/v1/points/create";
       var img = document.createElement("img");
      img.src = this.photo;
      // Create an empty canvas element
