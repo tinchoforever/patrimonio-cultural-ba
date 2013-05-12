@@ -17,7 +17,7 @@ initApp.controller('pointController', function ($scope, geolocation, camera, dev
   camera.getPicture(function (image) {
     points.setPhoto(image);
     $scope.photo = points.photo;
-    window.location ="/#/take-photo";
+    window.location.hash ="take-photo";
   });
 };
 
@@ -26,7 +26,7 @@ initApp.controller('pointController', function ($scope, geolocation, camera, dev
 $scope.submitPoint = function() {
   points.setTag($scope.tag);
   points.submit(function(){
-    window.location ="/#/finish";
+    window.location.hash ="finish";
   });
 };
 
