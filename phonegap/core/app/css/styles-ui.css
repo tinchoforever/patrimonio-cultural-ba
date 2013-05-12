@@ -53,9 +53,7 @@ a,input {
 	font-family: Arial;
 	font-size: 16px;
 	color: black;
-	line-height: 20px;
-	margin: 15px;
-	font-weight: bold;
+	line-height: 20px;	font-weight: bold;
 }
 
 .copy-txt.big-title {
@@ -85,19 +83,20 @@ a,input {
 .main .main-header{
 	height: 44.5px;
 	width: 100%;
-	background-color: #1c1b1b;
+	background-color: #1e1e1e;
 	overflow:hidden;
 	padding-left:16.5px;
 } 
 
 .main .main-header h1{
-	background:url("../img/ba-logo.png");
-	background-size:100%;
-	height:22px;
-	float:left;
-	font-size:0;
-	margin-top:12px;
-	width:113px;
+	height: 22px;
+	float: left;
+	margin-top: 8px;
+	width: 113px;
+	font-family: Arial;
+	font-size: 22px;
+	font-weight: bold;
+	color: white;
 }
 
 .main .main-header .menu-trigger{
@@ -125,27 +124,66 @@ a,input {
 }
 
 /*Home menu BEGIN*/
-.main .content .content-buttons {
+.main .content .bg-last-pic {
+	background: url(../img/img-ppal.jpg) no-repeat;
+	width: 100%;
+	height: 360px;
+	position: relative;
+}
+
+.main .content .bg-last-pic .welcome-txt{
+	background: #000;
+	opacity: .5;
+	padding: 23px;
+	position: absolute;
+	bottom: 3px;
+	padding-right: 40px;
+	width: 100%;
+	height: 120px;
+}
+
+.main .content .bg-last-pic p {
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 26px;
+	opacity: 1;
+	position: absolute;
+	z-index: 10;
+	bottom: 24px;
 	width: 230px;
+	left: 30px;
+}
+
+.main .content .content-buttons {
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 60px;
 }
 
 .main .content .content-buttons .menu-button{
-	width: 100%;
+	width: 50%;
 	height: 40px;
 	text-align: center;
 	font-size: 18px;
 	text-transform: uppercase;
-	background-color: black;
+	background-color: #1e1e1e;
 	border: 0;
 	margin-bottom: 20px;
 	color: white;
 	cursor: pointer;
 	font-family: Arial;
+	float: left;
 }
 
-.main .content .content-buttons .menu-button.take-pic{}
+.main .content .content-buttons .menu-button.take-pic{
+}
+
+.main .content .content-buttons .menu-button.see-map{
+	background-color: #ffd512;
+	color: black;
+}
 
 /*Home menu END*/
 
