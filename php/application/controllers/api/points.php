@@ -8,20 +8,20 @@ class Api_Points_Controller extends Base_Controller {
     {
         $uploaddir = path('public') . 'img/photos/';
 
-        $pointnew = Input::json();
+
         $building = new Building();
-        $building->lat = $pointnew->latitude;
-        $building->lng = $pointnew->longitude;
+        $building->lat = $_POST['latitude'];
+        $building->lng == $_POST['longitude'];
         $building->save();
 
         $photo = new Photo();
         $photo->bid = $building->id;
-        $file64 = $pointnew->photo;
-        $img = str_replace('data:image/png;base64,', '', $file64);
-        $img = str_replace(' ', '+', $img);
-        $data = base64_decode($img);
         $file = uniqid() . '.png';
-        $success = file_put_contents($uploaddir . $file, $data);
+        // $success = file_put_contents($uploaddir . $file, $data);
+        // $file_name = $_FILES['image']['name'];
+        $file_tmp = $_FILES['image']['tmp_name'];
+        // $val = $_POST['latitude'];
+        $success = move_uploaded_file($file_tmp,$uploaddir . $file );
 
         if ($success) {
             $photo->file = $file;
@@ -29,7 +29,7 @@ class Api_Points_Controller extends Base_Controller {
 
             $message = new Message();
             $message->bid = $building->id;
-            $message->text = $pointnew->tag;
+            $message->text = $_POST['tag'];
             $message->save();
 
             $response = array(
@@ -62,7 +62,7 @@ class Api_Points_Controller extends Base_Controller {
         //     $maxLng = $ll[1] + $oneKMDiffLng;
         //     $buildings = Building::where_between('lat', $minLat, $maxLat)->where_between('lng', $minLng, $maxLng)->get();
         // } else {
-        $buildings = Building::all();
+        $buildings = Building::order_by('id', 'desc')->get();
         // }
 
         foreach ($buildings as $building) {

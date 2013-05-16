@@ -23,26 +23,35 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
     },
     submit:function (callback){
 
-      var service ="http://patrimonio-cultural.elauria.com/api/v1/points/create";
-      var img = document.createElement("img");
-     img.src = this.photo;
-     // Create an empty canvas element
-     var canvas = document.createElement("canvas");
-     canvas.width = img.width;
-     canvas.height = img.height;
-     // // Copy the image contents to the canvas
-     var ctx = canvas.getContext("2d");
-     ctx.drawImage(img, 0, 0);
+      var service ='http://192.168.1.102:1984/api/v1/points/create';
 
-     var dataURL = canvas.toDataURL("image/png");
-    
-      var newpoint ={ photo:dataURL,
-        latitude:  this.location.latitude,
-        longitude : this.location.longitude,
-        tag :this.tag};
-      $http.post(service, newpoint ).success(function(data) {
-         callback();
-      });
+
+     // var dataURL = canvas.toDataURL("image/png");
+     var fail, ft, options, params, win;
+
+      // callback if the photo fails to upload successfully.
+     var fail= function(error) {
+
+        alert("An error has occurred: Code = " + error.code);
+      };
+      options = new FileUploadOptions();
+      // parameter name of file:
+      options.fileKey = "image";
+      // name of the file:
+      options.fileName = this.photo.substr(this.photo.lastIndexOf('/') + 1);
+      // mime type:
+      options.mimeType="image/png";
+      options.chunkedMode=true;
+      params = {
+        latitude: 1, //this.location.latitude,
+        longitude : 2,// this.location.longitude,
+        tag : this.tag
+      };
+      options.params = params;
+      ft = new FileTransfer();
+      ft.upload(this.photo, service, callback, fail, options);
+
+
     }
   };
 });
