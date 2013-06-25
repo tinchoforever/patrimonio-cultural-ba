@@ -192,7 +192,7 @@ a,input {
 	font-family: Arial;
 	float: left;
 	background-position: 50% 45%;
-	padding-top: 100px;
+	padding-top: 120px;
 }
 
 .main .content .content-buttons .menu-button.see-map{
@@ -415,6 +415,7 @@ a,input {
 	position:relative;
 }
 
+/*preview*/
 .preview-photo{
 	background:#000;
 }
@@ -433,6 +434,51 @@ a,input {
 
 .preview-photo .data-content-tag{
 	height:218px;
+}
+
+/*discover*/
+.discover .map-discover{
+	width:100%;
+	height:140px;
+	background:red;
+}
+
+.discover ul{
+	background-color:#fff;
+}
+
+.discover li{
+	border-bottom:1px solid #ccc;
+}
+
+.discover li a{
+	height:80px;
+	display:block;
+	overflow:hidden;
+}
+
+.discover li a img{
+	float:left;
+	height:80px;
+}
+
+.discover li a .discover-detail{
+	display:block;
+	padding:28px 0 0 100px;
+	background:url("../img/discover.png") right 28px no-repeat;
+}
+
+.discover li a .discover-detail h3{
+	font:bold 15px/15px Arial;
+	text-transform:uppercase;
+	color:#000;
+}
+
+.discover li a .discover-detail span{
+	font:bold 15px/15px Arial;
+	display:block;
+	text-transform:uppercase;
+	color:#919191;
 }
 
 @media screen and (min-width: 480px) and (max-width: 640px){

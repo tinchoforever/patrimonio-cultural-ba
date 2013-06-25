@@ -1,11 +1,16 @@
-<h1>Descubri</h1>
-
+<div class="content discover">
+	<div class="map-discover">
+		mapa
+	</div>
 <ul>
     <li ng-repeat="point in points">
         <a href="" ng-click="showDetail(point)">
-        <span>{{point.neightbour}} </span>
-        <img ng-src="{{point.photo}}"/>
-        <span> {{points.tags}}</span>
+        	<img ng-src="{{point.photo}}"/>
+	        <div class="discover-detail">
+		        <h3> {{point.tags}}</h3>
+		        <span>{{point.neightbour}} </span>
+	       	</div>
         </a>
     </li>
 </ul>
+</div>

@@ -32,7 +32,7 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
       for (var i = 0; i < 10; i++) {
         var p ={
           id: i,
-          photo: "http://lorempixel.com/200/200/cats/" + i,
+          photo: "http://lorempixel.com/800/800/cats/" + i,
           neightbour: "Palermo",
           tags: "tags tags tags" + i,
           description: "description description" + i,
