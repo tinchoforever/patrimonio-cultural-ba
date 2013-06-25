@@ -37,6 +37,7 @@ a,input {
 
 .finish-photo {
 	height: 100%;
+	max-width:none;
 }
 
 .submit-btn {
@@ -371,6 +372,7 @@ a,input {
 	font-size:0;
 	height:75px;
 	width:108px;
+	text-indent: -9999px;
 }
 
 .bottom-buttons .big-button.photo{
@@ -387,8 +389,8 @@ a,input {
 
 .bottom-buttons .next-button{
 	float:right;
-	margin-right:22px;
-	margin-top:30px;
+	display:block;
+	padding:30px 22px 30px 70px;
 }
 
 .bottom-buttons .next-button .caption{
@@ -460,9 +462,12 @@ a,input {
 	overflow:hidden;
 }
 
-.discover li a img{
+.discover li a .discover-img img{
 	float:left;
 	height:80px;
+	width:110px;
+	overflow:hidden;
+	margin-right:10px;
 }
 
 .discover li a .discover-detail{
@@ -496,12 +501,16 @@ a,input {
 }
 
 .discover-detail .data-content-position{
-	height: 15%;
-	width:100%;
 	position: absolute;
 	bottom:0;
+	width:100%;
+}
+
+.discover-detail .data-content-position .data-content-position-info{
+	height: 65px;
+	width:100%;
 	background: rgba(0,0,0,0.8);
-	padding:25px 0 0 25px;
+	padding:18px 0 0 25px;
 }
 
 .discover-detail .data-content-position h3{
@@ -516,6 +525,10 @@ a,input {
 	display:block;
 	text-transform:uppercase;
 	color:#fff;
+}
+
+.discover-detail .data-content-position .bottom-buttons{
+	position:static;
 }
 
 @media screen and (min-width: 480px) and (max-width: 640px){
