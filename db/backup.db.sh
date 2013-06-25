@@ -1,0 +1,1 @@
+/Applications/MAMP/Library/bin/mysqldump --opt --password=root --user=root patrimonio > patrimonio-cultural-2013-JUN-25-12.00.sql
