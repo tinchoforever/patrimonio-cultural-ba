@@ -26,22 +26,16 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
     selectPhoto: function(photo){
       this.currentPhoto= photo;
     },
-    //TODO: Merge to the point.
     getAllNear: function(point, callback){
       this.points = [];
-      for (var i = 0; i < 10; i++) {
-        var p ={
-          id: i,
-          photo: "http://lorempixel.com/800/800/cats/" + i,
-          neightbour: "Palermo",
-          tags: "tags tags tags" + i,
-          description: "description description" + i,
-          username: "username",
-          timestamp: 1372169316
-        }
-        this.points.push(p);
-      }
-      callback(this.points);
+      var self = this;
+      var service ='http://localhost:1984/api/v1/points/take/10';
+      $http.get(service).success(function(data){
+        self.points = data;
+        callback(self.points); 
+      });
+
+      
     },
     submit:function (callback){
       var service ='http://localhost:1984/api/v1/points/create';
