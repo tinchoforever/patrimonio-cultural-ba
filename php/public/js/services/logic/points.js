@@ -13,7 +13,7 @@ angular.module('App.services', ['LocalStorageModule', 'ngResource'])
         points: [],
         getall: function (successCallback) {
           self = this;
-          $http.get('/api/v1/points/all').success(function (data) {
+          $http.get('/api/v1/points/geo/all/').success(function (data) {
             for (var i = 0;i <data.length; i++) {
                 var point = data[i];
                 point.map = "http://maps.google.com/maps/api/staticmap?sensor=false&center=" + point.latitude + "," +
