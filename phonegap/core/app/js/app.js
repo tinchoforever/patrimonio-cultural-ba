@@ -27,6 +27,10 @@
       templateUrl: 'views/discover.html',
       controller: 'discoverController'
     })
+    .when('/detail', {
+      templateUrl: 'views/detail.html',
+      controller: 'detailController'
+    })
     .otherwise({
       redirectTo: '/'
     });

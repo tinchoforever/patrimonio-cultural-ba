@@ -9,6 +9,8 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
 .value('version', '0.1')
 .service('points', function ($rootScope, $http, localStorageService, $resource,device) {
   return {
+    currentPhoto: {},
+    points: [],
     photo: '',
     location: {},
     tag: '',
@@ -20,6 +22,26 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
     },
      setPhoto: function (photo) {
       this.photo = photo;
+    },
+    selectPhoto: function(photo){
+      this.currentPhoto= photo;
+    },
+    //TODO: Merge to the point.
+    getAllNear: function(point, callback){
+      this.points = [];
+      for (var i = 0; i < 10; i++) {
+        var p ={
+          id: i,
+          photo: "http://lorempixel.com/200/200/cats/" + i,
+          neightbour: "Palermo",
+          tags: "tags tags tags" + i,
+          description: "description description" + i,
+          username: "username",
+          timestamp: 1372169316
+        }
+        this.points.push(p);
+      }
+      callback(this.points);
     },
     submit:function (callback){
       var service ='http://localhost:1984/api/v1/points/create';
