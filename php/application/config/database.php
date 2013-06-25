@@ -70,7 +70,7 @@ return array(
 		'mysql' => array(
 			'driver'   => 'mysql',
 			'host'     => 'localhost',
-			'database' => 'patrimonio-publico',
+			'database' => 'patrimonio',
 			'username' => 'root',
 			'password' => 'root',
 			'charset'  => 'utf8',

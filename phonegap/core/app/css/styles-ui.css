@@ -36,8 +36,7 @@ a,input {
 }
 
 .finish-photo {
-	max-width: 100%;
-	min-height: 100%;
+	height: 100%;
 }
 
 .submit-btn {
@@ -315,8 +314,8 @@ a,input {
 
 .preview-photo .photo{
 	display:block;
-	max-height:420px;
-	width:100%;
+	height:100%;
+	max-width: none;
 }
 
 .preview-photo .picture-container{
@@ -433,7 +432,7 @@ a,input {
 }
 
 .preview-photo .data-content-tag{
-	height:218px;
+	height:217px;
 }
 
 /*discover*/
@@ -479,6 +478,40 @@ a,input {
 	display:block;
 	text-transform:uppercase;
 	color:#919191;
+}
+
+.discover-detail .img-detail-content{
+	height: 100%;
+	width:100%;
+	position: relative;
+}
+
+.discover-detail .img-detail-content img{
+	height:100%;
+	max-width: none;
+}
+
+.discover-detail .data-content-position{
+	height: 15%;
+	width:100%;
+	position: absolute;
+	bottom:0;
+	background: rgba(0,0,0,0.8);
+	padding:25px 0 0 25px;
+}
+
+.discover-detail .data-content-position h3{
+	font:bold 15px/15px Arial;
+	text-transform:uppercase;
+	color:#ffd512;
+	padding:0 5px 0 0;
+}
+
+.discover-detail .data-content-position span{
+	font:bold 15px/15px Arial;
+	display:block;
+	text-transform:uppercase;
+	color:#fff;
 }
 
 @media screen and (min-width: 480px) and (max-width: 640px){
