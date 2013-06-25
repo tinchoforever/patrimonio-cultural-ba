@@ -11,16 +11,14 @@ class Api_Points_Controller extends Base_Controller {
 
         $building = new Building();
         $building->lat = $_POST['latitude'];
-        $building->lng == $_POST['longitude'];
+        $building->lng = $_POST['longitude'];
+
         $building->save();
 
         $photo = new Photo();
         $photo->bid = $building->id;
         $file = uniqid() . '.png';
-        // $success = file_put_contents($uploaddir . $file, $data);
-        // $file_name = $_FILES['image']['name'];
         $file_tmp = $_FILES['image']['tmp_name'];
-        // $val = $_POST['latitude'];
         $success = move_uploaded_file($file_tmp,$uploaddir . $file );
 
         if ($success) {
@@ -130,27 +128,28 @@ class Api_Points_Controller extends Base_Controller {
                 ->where('lng', '<>', 1)
                 ->where('lat', '<>', "")
                 ->where('lng', '<>', "")
-                ->where('category', '<>', "")
-                ->where('name', '<>', "")
-                ->where('photo', '<>', "")
                 ->order_by('id', 'desc')
                 ->get();
         }
 
         foreach ($buildings as $building) {
             $photos = $building->photos()->get();
+            $messages = $building->messages()->get();
             $photoUrl = "";
+            $message = "";
             if (count($photos)) {
                 $photo = $photos[0]->file;
                 $photoUrl = (strpos($photo, 'http:') !== false) ? $photo : url('/../img/photos/' . $photo);
-
-                // $message = $messages[0]->text;
+            }
+            if (count($messages)){
+                $message = $messages[0]->text;
             }
 
             $data[] = array(
                 'latitude' => $building->lat,
                 'longitude' => $building->lng,
-                'tags' => $building->category,
+                'category' => $building->category,
+                'tags' =>$message,
                 'name' => $building->name,
                 'photo' => ($photoUrl != "" ? $photoUrl : $building->photo )
             );
