@@ -23,6 +23,10 @@
       templateUrl: 'views/finish.html',
       controller: 'pointController'
     })
+    .when('/discover', {
+      templateUrl: 'views/discover.html',
+      controller: 'discoverController'
+    })
     .otherwise({
       redirectTo: '/'
     });

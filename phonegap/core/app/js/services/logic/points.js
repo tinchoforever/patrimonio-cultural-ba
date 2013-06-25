@@ -22,14 +22,11 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
       this.photo = photo;
     },
     submit:function (callback){
+      var service ='http://localhost:1984/api/v1/points/create';
+      // var dataURL = canvas.toDataURL("image/png")
+      var fail, ft, options, params, win;
 
-      var service ='http://192.168.1.102:1984/api/v1/points/create';
-
-
-     // var dataURL = canvas.toDataURL("image/png");
-     var fail, ft, options, params, win;
-
-      // callback if the photo fails to upload successfully.
+    // callback if the photo fails to upload successfully.
      var fail= function(error) {
 
         alert("An error has occurred: Code = " + error.code);

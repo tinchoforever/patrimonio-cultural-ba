@@ -1,5 +1,6 @@
 body,h1,h2,h3,h4,h5,h6,p,ul,li,a,table {margin: 0; padding: 0;}
 
+html, body{height:100%;}
 body {
 	background-color: #ebebeb;
 	font-family:Helvetica, Arial;
@@ -84,10 +85,12 @@ a,input {
 .main {
 	width: 100%;
 	font-family: Helvetica, Arial;
+	height:100%;
+	position:relative;
 }
 
 .main .main-header{
-	height: 44.5px;
+	height:8%;
 	width: 100%;
 	background-color: #1e1e1e;
 	overflow:hidden;
@@ -126,16 +129,18 @@ a,input {
 }
 
 .main .content {
-	padding-bottom: 20px;
+	/*padding-bottom: 20px;*/
+	height: 100%;
+	position: relative;
 }
 
 /*Home menu BEGIN*/
 .main .content .bg-last-pic {
 	background: url(../img/img-ppal.jpg) no-repeat;
 	width: 100%;
-	height: 357px;
+	height:68.2%;
 	position: relative;
-	bottom: 80px;
+	/*bottom: 80px;*/
 }
 
 .main .content .bg-last-pic.finish-pic {
@@ -171,7 +176,8 @@ a,input {
 	width: 100%;
 	margin: 0 auto;
 	position: absolute;
-	top: 322px;
+	bottom: 0;
+	height:31.8%;
 }
 
 .main .content .content-buttons .menu-button{
@@ -315,12 +321,10 @@ a,input {
 
 .preview-photo .picture-container{
 	position:relative;
+	height:86%;
 }
 
 .preview-photo .picture-container .picture-bottom{
-	bottom:0;
-	left:0;
-	position:absolute;
 	width:100%;
 }
 .preview-photo .picture-container .picture-bottom .caption{
@@ -354,6 +358,9 @@ a,input {
 	background:#ffd512;
 	height:75px;
 	overflow:hidden;
+	width:100%;
+	position:absolute;
+	bottom:0;
 }
 
 .bottom-buttons .big-button{
@@ -373,6 +380,10 @@ a,input {
 
 .bottom-buttons .big-button.art{
 	background-image:url("../img/art.png");
+}
+
+.bottom-buttons .geo-button{
+	background-image:url("../img/geo.png");
 }
 
 .bottom-buttons .next-button{
@@ -397,4 +408,47 @@ a,input {
 	margin-left:16px;
 	height:16px;
 	width:10.5px;
+}
+
+.container{
+	height:92%;
+	position:relative;
+}
+
+.preview-photo{
+	background:#000;
+}
+
+.preview-photo .data-content-position{
+	position:absolute;
+	bottom:0;
+	height:280px;
+	overflow:hidden;
+	width:100%;
+}
+
+.preview-photo .data-content-position .map-container-general img{
+	width:100%;
+}
+
+.preview-photo .data-content-tag{
+	height:218px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 640px){
+
+	.main .main-header{
+		height:14%;
+	}
+	.main .content .bg-last-pic{
+		background-size:100% auto;
+		background-position:center;
+	}
+	.main .content .bg-last-pic .welcome-txt{
+		height:100px;
+	}
+	.main .content .bg-last-pic p{
+		width:300px;
+	}
+
 }

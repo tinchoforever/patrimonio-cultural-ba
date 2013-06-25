@@ -1,15 +1,17 @@
 <div class="content preview-photo">
 	<div class="picture-container">
-	<img class="photo" ng-src="{{photo}}"/>
-		<div class="picture-bottom">
-			<h1 class="caption" class="copy-txt big-title point"> Donde esta esta obra?</h1>
+		<img class="photo" ng-src="{{photo}}"/>
+		<div class="data-content-position">
+			<div class="picture-bottom">
+				<h1 class="caption" class="copy-txt big-title point">Donde esta esta obra?</h1>
+			</div>
+			<div class="map-container-general">
+		      <img ng-src="{{map}}"/>
+		    </div>
 		</div>
 	</div>
-    <div class="map-container-general">
-      <img ng-src="{{map}}"/></p>
-		<div class="bottom-buttons">
-		   <a ng-click="refreshLocation()" class="big-button map" href="" ng-click="takepic()">Sacar otra</a>
-	       <a class="next-button" href="" onclick="window.location.hash='/tag'"><span class="caption">Siguiente</span><span class="arrow"></span></a>
-	    </div>
+	<div class="bottom-buttons">
+	   <a ng-click="refreshLocation()" class="big-button map geo-button" href="" ng-click="takepic()">Geolocation</a>
+       <a class="next-button" href="" onclick="window.location.hash='/tag'"><span class="caption">Siguiente</span><span class="arrow"></span></a>
     </div>
  </div>
