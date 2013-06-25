@@ -4,12 +4,19 @@
 	</div>
 <ul>
     <li ng-repeat="point in points">
+<<<<<<< HEAD
         <a href="" ng-click="showDetail(point)">
         	<img ng-src="{{point.photo}}"/>
 	        <div class="discover-detail">
 		        <h3> {{point.tags}}</h3>
 		        <span>{{point.neightbour}} </span>
 	       	</div>
+=======
+        <a href="" ng-click="(point)">
+        <span>{{point.neightbour}} </span>
+        <img ng-src="{{point.photo}}"/>
+        <span> {{points.tags}}</span>
+>>>>>>> a926d6c09f79aa6e2f3b1bfbbbff422e035d9749
         </a>
     </li>
 </ul>
