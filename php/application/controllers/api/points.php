@@ -42,7 +42,7 @@ class Api_Points_Controller extends Base_Controller {
         return Response::json($response);
     }
     public function get_take($count){
-        $data = Api_Points_Controller::getCleanBuildings($count);
+        $data = Api_Points_Controller::getBuildings($count);
         return Response::json($data);
     }
 
