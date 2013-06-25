@@ -13,8 +13,8 @@
  	<img class="finish-photo" ng-src="{{photo}}"/>
 
     <div class="content-buttons">
-        <button class="menu-button take-pic" onclick="window.location.hash='/map'">Descubri</button>
-        <button class="menu-button see-map" onclick="window.location='/'">Agrega</button>
+        <a href="#/discover/"  class="menu-button take-pic" >Descubri</a>
+        <a ng-click="takepic()" class="menu-button see-map">Agrega</a>
     </div>
 
 
