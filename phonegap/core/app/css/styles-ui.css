@@ -529,6 +529,14 @@ a,input {
 
 .discover-detail .data-content-position .bottom-buttons{
 	position:static;
+	background-color:#1e1e1e;
+}
+
+.discover-detail .data-content-position .bottom-buttons .discover-icon{
+	width:25%;
+	background-image:url("../img/ico-discover.png");
+	background-color:#ffd512;
+	background-size: 150%;
 }
 
 @media screen and (min-width: 480px) and (max-width: 640px){
