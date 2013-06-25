@@ -2,12 +2,12 @@
   <div class="twelve columns">
     <ul >
       <li class="field">
-        <input class="large search input" type="searcg" placeholder="Que obra urbana queres buscar?" ng-model="query">
+        <input class="large search input" type="search" placeholder="Que obra urbana queres buscar?" ng-model="query">
         </ul>
 
     <ul class="gallery-list">
       <li ng-repeat="point in points | filter:query">
-        <img class="picture" ng-src={{point.picture}}>
+        <img class="picture" ng-src={{point.photo}}>
         <img class="location" ng-src={{point.map}}>
          <h3> {{point.name}}</h3>
         <h6> {{point.tags}} </h6>
