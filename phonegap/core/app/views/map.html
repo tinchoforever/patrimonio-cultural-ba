@@ -1,17 +1,18 @@
 <div class="content discover-detail">
 	<div class="img-detail-content">
-		<img ng-src="{{point.photo}}"/>
+		<div class="maps">
+			mapa
+		</div>
 		<div class="data-content-position">
-			<div class="data-content-position-info">
+			<!--<div class="data-content-position-info">
 				<h3> {{point.name}}</h3>
 				<span>{{point.tags}} </span>
-			</div>
+			</div>-->
 			<div class="bottom-buttons">
 			   <div class="big-button discover-icon"></div>
 			   <a class="map" href="#/map/">map</a>
 			   <a class="list" href="#/discover/">list</a>
-			   <a class="take-picture" href="#/take-photo/">take</a>
-		       <!--<a class="next-button" href="" ng-click="submitPoint()"><span class="caption">Siguiente</span><span class="arrow"></span></a>-->
+			   <a class="take-picture" ng-click="takepic()">take</a>
     		</div>
 		</div>
 	</div>

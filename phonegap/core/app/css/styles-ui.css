@@ -539,6 +539,28 @@ a,input {
 	background-size: 150%;
 }
 
+.discover-detail .data-content-position .bottom-buttons a{
+	width:25%;
+	height:75px;
+	display:block;
+	text-indent:-9999px;
+	float:left;
+	background-size: 150%;
+	background-position: center;
+}
+
+.discover-detail .data-content-position .bottom-buttons a.map{
+	background-image:url("../img/ico-map.png");
+}
+
+.discover-detail .data-content-position .bottom-buttons a.list{
+	background-image:url("../img/ico-list.png");
+}
+
+.discover-detail .data-content-position .bottom-buttons a.take-picture{
+	background-image:url("../img/ico-takepicture.png");
+}
+
 @media screen and (min-width: 480px) and (max-width: 640px){
 
 	.main .main-header{

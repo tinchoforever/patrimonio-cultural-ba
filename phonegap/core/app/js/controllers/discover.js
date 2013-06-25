@@ -12,7 +12,7 @@ initApp.controller('discoverController', function ($scope, geolocation, camera, 
     $scope.mapLocation = function() {
 	   geolocation.getCurrentPosition(function (position) {
 	     $scope.position = position;
-	      $scope.map = "http://staticmap.openstreetmap.de/staticmap.php?center=" + position.coords.latitude  + ',' +position.coords.longitude + "&zoom=20&size=300x200&maptype=mapnik&markers="+ position.coords.latitude + ',' +position.coords.longitude +",lightblue1";
+	      $scope.map = "http://staticmap.openstreetmap.de/staticmap.php?center=" + position.coords.latitude  + ',' +position.coords.longitude + "&zoom=10&size=300x200&maptype=mapnik&markers="+ position.coords.latitude + ',' +position.coords.longitude +",lightblue1";
 	      points.setLocation(position.coords);
 	   });
 	 };

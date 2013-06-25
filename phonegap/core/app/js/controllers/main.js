@@ -6,7 +6,7 @@ initApp.controller('pointController', function ($scope, geolocation, camera, dev
   $scope.refreshLocation = function() {
    geolocation.getCurrentPosition(function (position) {
      $scope.position = position;
-      $scope.map = "http://staticmap.openstreetmap.de/staticmap.php?center=" + position.coords.latitude  + ',' +position.coords.longitude + "&zoom=20&size=300x200&maptype=mapnik&markers="+ position.coords.latitude + ',' +position.coords.longitude +",lightblue1";
+      $scope.map = "http://staticmap.openstreetmap.de/staticmap.php?center=" + position.coords.latitude  + ',' +position.coords.longitude + "&zoom=10&size=300x200&maptype=mapnik&markers="+ position.coords.latitude + ',' +position.coords.longitude +",lightblue1";
       points.setLocation(position.coords);
    });
  };
@@ -16,7 +16,7 @@ initApp.controller('pointController', function ($scope, geolocation, camera, dev
     points.setPhoto(image);
     $scope.photo = points.photo;
     // points.submit(function(){
-      window.location.hash ="take-photo";
+      window.location.hash ="confirm-photo";
     // });
   });
 };
