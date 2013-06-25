@@ -493,6 +493,7 @@ a,input {
 	height: 100%;
 	width:100%;
 	position: relative;
+	overflow:hidden;
 }
 
 .discover-detail .img-detail-content img{
