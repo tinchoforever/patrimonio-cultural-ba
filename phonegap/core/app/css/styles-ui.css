@@ -342,7 +342,7 @@ a,input {
 .preview-photo .picture-container .loading{
 	height: 100%;
 	width: 100%;
-	background:#000 url("../img/ico-loading.gif") center 50px no-repeat;
+	background:#000 url("../img/ico-loading-black.gif") center 50px no-repeat;
 	text-indent: -9999px;
 }
 
