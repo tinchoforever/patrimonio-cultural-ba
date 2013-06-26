@@ -339,6 +339,13 @@ a,input {
 	height:87.1%;
 }
 
+.preview-photo .picture-container .loading{
+	height: 100%;
+	width: 100%;
+	background:#000 url("../img/ico-loading-black.gif") center 50px no-repeat;
+	text-indent: -9999px;
+}
+
 .preview-photo .picture-container .picture-bottom{
 	width:100%;
 }
