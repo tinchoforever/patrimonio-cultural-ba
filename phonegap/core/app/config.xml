@@ -7,20 +7,31 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Patrimonio Cultural</name>
+    <name>MapArt</name>
 
     <description>
-        GCBA
+        Patrimonio Cultural GCBA
     </description>
 
     <author href="http://rga.com/about/locations/buenos-aires/" email="support@phonegap.com">
         R/GA
     </author>
-
+    <preference name="phonegap-version" value="2.5.0" />
     <!-- recommended for Android platform -->
     <preference name="orientation" value="portrait" />
     <icon src="icon.png"/>
+    <icon src="icon.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="icon.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="icon.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="icon.png" gap:platform="android" gap:density="xhdpi" />
 
+    <icon src="icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="icon.png" gap:platform="ios" width="72" height="72" />
+    <icon src="icon.png" gap:platform="ios" width="114" height="114" />
 
+    <!-- retina iPad support: PhoneGap 2.5.0+ only -->
+    <icon src="icon.png" gap:platform="ios" width="144" height="144" />
+
+    <access subdomains="true" uri="*" />
 
 </widget>
