@@ -3,15 +3,16 @@
   <p><div class="medium danger btn btn-large">
     <a href="/" > Empear de nuevo!</a>
   </div></p> -->
-<div class="content">
-    <div class="fin-module">
-		<div class="fin-txt"></div>
-		<p>Muchas Gracias!</p>
-		<span>Tu foto fue enviada exitosamente y sera visible en las proximas 24 hs.</span>
-	</div>
- 	<img class="finish-photo" ng-src="{{photo}}"/>
+<div class="content finish-view">
+    <div class="img-finish">
+ 	    <img class="finish-photo" ng-src="{{photo}}"/>
+      <div class="fin-module">
+        <p>Muchas Gracias!</p>
+        <span>Tu foto fue enviada exitosamente y sera visible en las proximas 24 hs.</span>
+      </div>
+    </div>
     <div class="content-buttons">
-        <a href="#/discover/"  class="menu-button take-pic" >Descubri</a>
-        <a ng-click="takepic()" class="menu-button see-map">Agrega</a>
+        <a href="#/discover/"  class="menu-button take-pic" ><span>Descubri</span></a>
+        <a ng-click="takepic()" class="menu-button see-map"><span>Agrega</span></a>
     </div>
 </div>

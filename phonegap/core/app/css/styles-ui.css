@@ -238,6 +238,7 @@ a,input {
 .main .content .map-container-general{
 	width: 100%;
 	margin-bottom: 15px;
+	background: #000;
 }
 
 .main .content .tag-container {
@@ -335,7 +336,7 @@ a,input {
 
 .preview-photo .picture-container{
 	position:relative;
-	height:86%;
+	height:87.1%;
 }
 
 .preview-photo .picture-container .picture-bottom{
@@ -402,60 +403,65 @@ a,input {
 }
 
 .bottom-buttons .next-button{
-	float:right;
-	display:block;
-	padding:30px 22px 30px 70px;
+	float: right;
+	display: block;
+	padding: 30px 22px 30px 70px;
 }
 
 .bottom-buttons .next-button .caption{
-	color:#1e1e1e;
-	float:left;
-	font-size:18.5px;
-	font-weight:bold;
-	line-height:15px;
-	text-decoration:none;
+	color: #1e1e1e;
+	float: left;
+	font-size: 18.5px;
+	font-weight: bold;
+	line-height: 15px;
+	text-decoration: none;
 }
 
 .bottom-buttons .next-button .arrow{
-	background-image:url("../img/arrow.png");
-	background-size:100%;
-	float:right;
-	margin-left:16px;
-	height:16px;
-	width:10.5px;
+	background-image: url("../img/arrow.png");
+	background-size: 100%;
+	float: right;
+	margin-left: 16px;
+	height: 16px;
+	width: 10.5px;
 }
 
 .container{
-	height:100%;
-	position:relative;
+	height: 100%;
+	position: relative;
 }
 
 /*preview*/
 .preview-photo{
-	background:#000;
+	background: #000;
+	overflow: hidden;
 }
 
 .preview-photo .data-content-position{
-	position:absolute;
-	bottom:0;
-	height:280px;
-	overflow:hidden;
-	width:100%;
+	position: absolute;
+	bottom: 0;
+	height: 280px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.preview-photo .bottom-buttons{
+	height:13%;
 }
 
 .preview-photo .data-content-position .map-container-general img{
-	width:100%;
+	width: 100%;
 }
 
 .preview-photo .data-content-tag{
-	height:217px;
+	height: 210px;
 }
 
 /*discover*/
 .discover .map-discover{
-	width:100%;
-	height:140px;
-	overflow:hidden;
+	width: 100%;
+	height: 140px;
+	overflow: hidden;
 }
 
 .discover .map-discover img{
@@ -463,134 +469,168 @@ a,input {
 }
 
 .discover ul{
-	background-color:#fff;
+	background-color: #fff;
 }
 
 .discover li{
-	border-bottom:1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
 
 .discover li a{
-	height:80px;
-	display:block;
-	overflow:hidden;
+	height: 80px;
+	display: block;
+	overflow: hidden;
 }
 
 .discover li a .discover-img img{
-	float:left;
-	height:80px;
-	width:110px;
-	overflow:hidden;
-	margin-right:10px;
+	float: left;
+	height: 80px;
+	width: 110px;
+	overflow: hidden;
+	margin-right: 10px;
 }
 
 .discover li a .discover-detail{
-	display:block;
-	padding:28px 0 0 100px;
-	background:url("../img/discover.png") right 28px no-repeat;
-	height:80px;
+	display: block;
+	padding: 28px 0 0 100px;
+	background: url("../img/discover.png") right 28px no-repeat;
+	height: 80px;
 }
 
 .discover li a .discover-detail h3{
-	font:bold 15px/15px Arial;
-	text-transform:uppercase;
-	color:#000;
+	font: bold 15px/15px Arial;
+	text-transform: uppercase;
+	color: #000;
 }
 
 .discover li a .discover-detail span{
-	font:bold 15px/15px Arial;
-	display:block;
-	text-transform:uppercase;
-	color:#919191;
+	font: bold 15px/15px Arial;
+	display: block;
+	text-transform: uppercase;
+	color: #919191;
+}
+
+.discover .loading{
+	background-color: red;
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 .discover-detail .img-detail-content{
 	height: 100%;
-	width:100%;
+	width: 100%;
 	position: relative;
-	overflow:hidden;
+	overflow: hidden;
 }
 
 .discover-detail .img-detail-content img{
-	height:100%;
+	height: 100%;
 	max-width: none;
 }
 
 .discover-detail .data-content-position{
 	position: absolute;
-	bottom:0;
-	width:100%;
+	bottom: 0;
+	width: 100%;
 }
 
 .discover-detail .data-content-position .data-content-position-info{
 	height: 65px;
-	width:100%;
+	width: 100%;
 	background: rgba(0,0,0,0.8);
-	padding:18px 0 0 25px;
+	padding: 18px 0 0 25px;
 }
 
 .discover-detail .data-content-position h3{
-	font:bold 15px/15px Arial;
-	text-transform:uppercase;
-	color:#ffd512;
-	padding:0 5px 0 0;
+	font: bold 15px/15px Arial;
+	text-transform: uppercase;
+	color: #ffd512;
+	padding: 0 5px 0 0;
 }
 
 .discover-detail .data-content-position span{
-	font:bold 15px/15px Arial;
-	display:block;
-	text-transform:uppercase;
-	color:#fff;
+	font: bold 15px/15px Arial;
+	display: block;
+	text-transform: uppercase;
+	color: #fff;
 }
 
 .discover-detail .data-content-position .bottom-buttons{
-	position:static;
-	background-color:#1e1e1e;
+	position: static;
+	background-color: #1e1e1e;
 }
 
 .discover-detail .data-content-position .bottom-buttons .discover-icon{
-	width:25%;
-	background-image:url("../img/ico-discover.png");
-	background-color:#ffd512;
+	width: 25%;
+	background-image: url("../img/ico-discover.png");
+	background-color: #ffd512;
 	background-size: 150%;
 }
 
 .discover-detail .data-content-position .bottom-buttons a{
-	width:25%;
-	height:75px;
-	display:block;
-	text-indent:-9999px;
-	float:left;
+	width: 25%;
+	height: 75px;
+	display: block;
+	text-indent: -9999px;
+	float: left;
 	background-size: 150%;
 	background-position: center;
 }
 
 .discover-detail .data-content-position .bottom-buttons a.map{
-	background-image:url("../img/ico-map.png");
+	background-image: url("../img/ico-map.png");
 }
 
 .discover-detail .data-content-position .bottom-buttons a.list{
-	background-image:url("../img/ico-list.png");
+	background-image: url("../img/ico-list.png");
 }
 
 .discover-detail .data-content-position .bottom-buttons a.take-picture{
-	background-image:url("../img/ico-takepicture.png");
+	background-image: url("../img/ico-takepicture.png");
+}
+
+/*finish-view*/
+.finish-view .img-finish{
+	height: 74%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.main .finish-view .img-finish .fin-module{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	height: 110px;
+	padding: 23px 15px 0;
+}
+
+.main .finish-view .img-finish .fin-module p{
+	position: static;
+}
+
+.main .finish-view .img-finish .fin-module span{
+	position: static;
+	display: block;
+	padding: 5px 0 0;
 }
 
 @media screen and (min-width: 480px) and (max-width: 640px){
 
 	.main .main-header{
-		height:14%;
+		height: 14%;
 	}
 	.main .content .bg-last-pic{
-		background-size:100% auto;
-		background-position:center;
+		background-size: 100% auto;
+		background-position: center;
 	}
 	.main .content .bg-last-pic .welcome-txt{
-		height:100px;
+		height: 100px;
 	}
 	.main .content .bg-last-pic p{
-		width:300px;
+		width: 300px;
 	}
 
 }
