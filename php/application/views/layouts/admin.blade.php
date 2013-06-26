@@ -26,6 +26,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link rel="stylesheet" href="css/frameworks/gumby.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
 
 
 
@@ -67,6 +68,10 @@
   <script src="js/services/logic/points.js"></script>
 
   <script src="js/app.js"></script>
+
+  <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+  <script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>
 
 
   <!-- endbuild -->
