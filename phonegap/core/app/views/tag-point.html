@@ -3,15 +3,15 @@
 		<img class="photo" ng-src="{{photo}}"/>
 		<div class="data-content-position data-content-tag">
 			<div class="picture-bottom">
-				<h3 ng-show="{{wait}}" class="caption">
+				<h3 ng-show="wait" class="caption">
 					Cargando imagen
 				</h3>
-				<h3 ng-hide="{{wait}}" class="caption">
+				<h3 ng-hide="wait" class="caption">
 					Describi la Obra
 				</h3>
 			</div>
-			<div ng-show="{{wait}}" class="loading">loading</div>
-			<div ng-hide="{{wait}}" class="tag-photo">
+			<div ng-show="wait" class="loading">loading</div>
+			<div ng-hide="wait" class="tag-photo">
 		        <h1 >Describi con palabras claves el<br />
 				punto que va a agregar. </h1>
 		        <input type="text" ng-model="tag" class="tag-field" placeholder="#" />
@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	
-	<div class="bottom-buttons">
+	<div ng-hide="wait" class="bottom-buttons">
 	   <div class="big-button art"></div>
        <a class="next-button" href="" ng-click="submitPoint()"><span class="caption">Siguiente</span><span class="arrow"></span></a>
     </div>

@@ -237,8 +237,7 @@ a,input {
 /*General Map BEGIN*/
 .main .content .map-container-general{
 	width: 100%;
-	margin-bottom: 15px;
-	background: #000;
+	background: #000 url("../img/ico-loading-black.gif") center no-repeat;
 }
 
 .main .content .tag-container {
@@ -342,7 +341,7 @@ a,input {
 .preview-photo .picture-container .loading{
 	height: 100%;
 	width: 100%;
-	background:#000 url("../img/ico-loading-black.gif") center 50px no-repeat;
+	background:#000 url("../img/ico-loading-black.gif") center no-repeat;
 	text-indent: -9999px;
 }
 
