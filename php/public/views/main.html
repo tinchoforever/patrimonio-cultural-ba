@@ -1,18 +1,33 @@
+<style>
+  body,h1,h2,h3,h4,h5,h5,ul,li,p {margin: 0; padding: 0;}
+
+  #map {
+    height: 800px;
+  }
+
+  .leaflet-popup-content-wrapper {
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+  }
+
+  .leaflet-popup-content {
+    margin: 25px 30px 11px 12px;
+  }
+
+  a.leaflet-popup-close-button {
+    padding: 7px 10px 0 0;
+  }
+
+</style>
+
 <div class="row">
   <div class="twelve columns">
     <!-- <input class="large search input" type="searcg" placeholder="Que obra urbana queres buscar?" ng-model="query"> -->
-    <div class="google-map"
-      center="centerProperty"
-      zoom="zoomProperty"
-      markers="markersProperty"
-      latitude="clickedLatitudeProperty"
-      longitude="clickedLongitudeProperty"
-      mark-click="false"
-      draggable="true"
-      zoom="true"
-      fit="true"
-      style="height: 400px; width: 100%"
-      zoom-control="true">
     </div>
-  </div>
 </div>
+
+<!-- New map -->
+    <div id="map"></div>
+
+
