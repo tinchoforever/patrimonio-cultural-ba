@@ -1,6 +1,5 @@
 
   'use strict';
-
   angular.module('initApp', ['initApp.services','initApp.controllers'])
   .config(function ($routeProvider) {
     $routeProvider

@@ -1,7 +1,7 @@
 'use strict';
 var initApp = angular.module('initApp.controllers',  ['LocalStorageModule']);
 
-initApp.controller('pointController', function ($scope, geolocation, camera, device, localStorageService, points) {
+initApp.controller('pointController', function ($scope, geolocation, camera, points) {
 
   $scope.refreshLocation = function() {
    geolocation.getCurrentPosition(function (position) {
