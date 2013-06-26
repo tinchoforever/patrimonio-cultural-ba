@@ -1,19 +1,19 @@
+<span class="loading">sdf</span>
 <div class="content discover">
 	<div class="map-discover">
-		<span class="loading" ng-hide="">sdf</span>
-		<img ng-show="" ng-src="{{map}}"/>
+		<img ng-src="{{map}}"/>
 	</div>
-<ul>
-    <li ng-repeat="point in points">
-        <a href="" ng-click="showDetail(point)">
-        	<div class="discover-img">
-        		<img ng-src="{{point.photo}}"/>
-        	</div>
-	        <div class="discover-detail">
-		        <h3> {{point.name}}</h3>
-		        <span>{{point.tags}} </span>
-	       	</div>
-        </a>
-    </li>
-</ul>
+	<ul>
+	    <li ng-repeat="point in points">
+	        <a href="" ng-click="showDetail(point)">
+	        	<div class="discover-img">
+	        		<img ng-src="{{point.photo}}"/>
+	        	</div>
+		        <div class="discover-detail">
+			        <h3> {{point.name}}</h3>
+			        <span>{{point.tags}} </span>
+		       	</div>
+	        </a>
+	    </li>
+	</ul>
 </div>
