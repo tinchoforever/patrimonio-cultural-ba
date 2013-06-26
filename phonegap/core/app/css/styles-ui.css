@@ -189,16 +189,24 @@ a,input {
 .main .content .content-buttons .menu-button{
 	width: 50%;
 	height: 100%;
-	text-align: center;
-	font-size: 13px;
+	position: relative;
 	background-color: #1e1e1e;
 	border: 0;
 	color: white;
 	cursor: pointer;
-	font-family: Arial;
 	float: left;
 	background-position: 50% 45%;
-	padding-top: 33%;
+	text-align: center;
+}
+
+.main .content .content-buttons .menu-button span{
+	font-size: 13px;
+	font-family: Arial;
+	position: absolute;
+	bottom: 8px;
+	left: 0;
+	width: 100%;
+	text-align: center;
 }
 
 .main .content .content-buttons .menu-button.see-map{
