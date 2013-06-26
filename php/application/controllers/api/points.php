@@ -83,9 +83,11 @@ class Api_Points_Controller extends Base_Controller {
 
     public function getBuildings($count=50){
 
-        $buildings =  Building::where('lat', '<>', 1)
-                ->where('lng', '<>', 1)
-                ->where('lat', '<>', "")
+        $buildings =  Building::
+                // where('lat', '<>', 1)
+                // ->where('lng', '<>', 1)
+                //->
+                where('lat', '<>', "")
                 ->where('lng', '<>', "")
                 ->order_by('id', 'desc')
                 ->take($count)
