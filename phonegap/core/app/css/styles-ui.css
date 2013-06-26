@@ -488,6 +488,7 @@ a,input {
 	display:block;
 	padding:28px 0 0 100px;
 	background:url("../img/discover.png") right 28px no-repeat;
+	height:80px;
 }
 
 .discover li a .discover-detail h3{
