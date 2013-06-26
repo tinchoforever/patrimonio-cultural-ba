@@ -385,7 +385,7 @@ a,input {
 	display:block;
 	float:left;
 	font-size:0;
-	height:75px;
+	height:100%;
 	width:108px;
 	text-indent: -9999px;
 }
