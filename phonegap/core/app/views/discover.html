@@ -2,6 +2,8 @@
 	<div class="map-discover">
 		<img ng-src="{{map}}"/>
 	</div>
+	<h1>{{position.coords.latitude}} , {{position.coords.longitude}}</h1>
+
 	<ul>
 	    <li ng-repeat="point in points">
 	        <a href="" ng-click="showDetail(point)">

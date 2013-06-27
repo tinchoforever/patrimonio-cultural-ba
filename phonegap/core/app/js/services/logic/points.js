@@ -60,8 +60,8 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
 
       //Parameters
       options.params =  {
-        latitude: 1,//this.location.latitude,
-        longitude : 1,//this.location.longitude,
+        latitude: this.location.latitude,
+        longitude : this.location.longitude,
         tag : this.tag
       };
       console.log(options.params );
