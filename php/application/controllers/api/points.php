@@ -112,6 +112,7 @@ class Api_Points_Controller extends Base_Controller {
             }
 
             $data[] = array(
+                'author' => 'GCBA',
                 'latitude' => $building->lat,
                 'longitude' => $building->lng,
                 'category' => $building->category,

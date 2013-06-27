@@ -27,8 +27,18 @@ $scope.wait = false;
 $scope.submitPoint = function() {
   $scope.wait = true;
   points.setTag($scope.tag);
-  points.submit(function(){
-    window.location.hash ="finish";
+  points.submit(function(data){
+    if (!data){
+        $scope.$apply(function(){
+          $scope.wait = false;
+
+        });
+    }
+    else{
+      alert(JSON.stringify(data, null, 4));
+      window.location.hash ="finish";
+    }
+
   });
 };
 
