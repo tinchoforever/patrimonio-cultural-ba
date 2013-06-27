@@ -23,7 +23,7 @@ initApp.controller('pointController', function ($scope, geolocation, camera, poi
 
 
 
-$scope.wait = true;
+$scope.wait = false;
 $scope.submitPoint = function() {
   $scope.wait = true;
   points.setTag($scope.tag);
