@@ -36,7 +36,7 @@ a,input {
 }
 
 .finish-photo {
-	height: 100%;
+	width: 100%;
 	max-width:none;
 }
 
@@ -328,84 +328,85 @@ a,input {
 /* TAKE PHOTO */
 
 .preview-photo .photo{
-	display:block;
-	height:100%;
+	display: block;
+	width: 100%;
 	max-width: none;
 }
 
 .preview-photo .picture-container{
 	position:relative;
-	height:87.1%;
+	height: 87.1%;
+	/*padding-top: 45px;*/
 }
 
 .preview-photo .picture-container .loading{
 	height: 100%;
 	width: 100%;
-	background:#000 url("../img/ico-loading-black.gif") center no-repeat;
+	background: #000 url("../img/ico-loading-black.gif") center no-repeat;
 	text-indent: -9999px;
 }
 
 .preview-photo .picture-container .picture-bottom{
-	width:100%;
+	width: 100%;
 }
 .preview-photo .picture-container .picture-bottom .caption{
-	background:rgba(0,0,0,0.8);
-	color:#FFF;
-	font-size:23px;
-	font-weight:bold;
-	padding:20px;
+	background: rgba(0,0,0,0.8);
+	color: #FFF;
+	font-size: 23px;
+	font-weight: bold;
+	padding: 20px;
 }
 .tag-photo{
-	background:#000;
-	padding:25px;
+	background: #000;
+	padding: 25px;
 }
 .tag-photo h1{
-	color:#FFF;
-	font-size:16px;
-	font-weight:bold;
-	margin-bottom:18px;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 18px;
 }
 .tag-photo input[type="text"]{
-	background:#FFF;
-	border:none;
-	color:#FFD200;
-	font-family:Helvetica;
-	font-size:35px;
-	height:45px;
-	padding:10px;
-	width:100%;
+	background: #FFF;
+	border: none;
+	color: #FFD200;
+	font-family: Helvetica;
+	font-size: 35px;
+	height: 45px;
+	padding: 10px;
+	width: 100%;
 }
 .bottom-buttons{
-	background:#ffd512;
-	height:75px;
-	overflow:hidden;
-	width:100%;
-	position:absolute;
-	bottom:0;
+	background: #ffd512;
+	height: 75px;
+	overflow: hidden;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
 
 .bottom-buttons .big-button{
-	background-color:#1e1e1e;
-	background-position:center center;
-	background-size:100%;
-	display:block;
-	float:left;
-	font-size:0;
-	height:100%;
-	width:108px;
+	background-color: #1e1e1e;
+	background-position: center;
+	background-size: 100%;
+	display: block;
+	float: left;
+	font-size: 0;
+	height: 100%;
+	width: 108px;
 	text-indent: -9999px;
 }
 
 .bottom-buttons .big-button.photo{
-	background-image:url("../img/photo.png");
+	background-image: url("../img/photo.png");
 }
 
 .bottom-buttons .big-button.art{
-	background-image:url("../img/art.png");
+	background-image: url("../img/art.png");
 }
 
 .bottom-buttons .geo-button{
-	background-image:url("../img/geo.png");
+	background-image: url("../img/geo.png");
 }
 
 .bottom-buttons .next-button{
@@ -441,6 +442,7 @@ a,input {
 .preview-photo{
 	background: #000;
 	overflow: hidden;
+	padding-top:45px;
 }
 
 .preview-photo .data-content-position{
@@ -603,6 +605,7 @@ a,input {
 	width: 100%;
 	overflow: hidden;
 	position: relative;
+	padding-top: 45px;
 }
 
 .main .finish-view .img-finish .fin-module{
