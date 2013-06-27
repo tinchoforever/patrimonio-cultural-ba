@@ -35,7 +35,6 @@ $scope.submitPoint = function() {
         });
     }
     else{
-      alert(JSON.stringify(data, null, 4));
       window.location.hash ="finish";
     }
 
