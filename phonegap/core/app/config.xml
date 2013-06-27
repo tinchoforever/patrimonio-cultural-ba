@@ -32,6 +32,17 @@
     <!-- retina iPad support: PhoneGap 2.5.0+ only -->
     <icon src="icon.png" gap:platform="ios" width="144" height="144" />
 
+    <access origin="*" />
+    <access origin="http://openstreetmap.de" />
+    <access origin="http://debug.phonegap.com" />
+    <access origin="http://192.168.1.233" />
+    <access subdomains="true" uri="http://openstreetmap.de*" />
+    <access subdomains="true" uri="http://debug.phonegap.com*" />
     <access subdomains="true" uri="*" />
+    <access subdomains="true" uri="*.google.*" />
+    <access subdomains="true" uri="*.phonegap.*" />
+    <access subdomains="true" uri="*192.168.1.233*" />
+    <access subdomains="true" uri="*.openstreetmap.*" />
+
 
 </widget>

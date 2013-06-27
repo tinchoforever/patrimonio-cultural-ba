@@ -47,7 +47,8 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
     // callback if the photo fails to upload successfully.
      var fail= function(error) {
 
-        alert("An error has occurred: Code = " + error.code);
+        alert("Ups, no hemos podido transferir la foto. Intentalo de nuevo! ");
+        callback(false);
       };
       options = new FileUploadOptions();
 
