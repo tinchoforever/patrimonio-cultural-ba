@@ -545,10 +545,9 @@ a,input {
 }
 
 .discover-detail .data-content-position .data-content-position-info{
-	height: 65px;
 	width: 100%;
 	background: rgba(0,0,0,0.8);
-	padding: 18px 0 0 25px;
+	padding: 18px 0 18px 25px;
 }
 
 .discover-detail .data-content-position h3{

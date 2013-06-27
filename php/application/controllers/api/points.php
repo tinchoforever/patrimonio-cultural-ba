@@ -117,7 +117,8 @@ class Api_Points_Controller extends Base_Controller {
                 'category' => $building->category,
                 'tags' =>$message,
                 'name' => $building->name,
-                'photo' => ($photoUrl != "" ? $photoUrl : $building->photo )
+                'photo' => ($photoUrl != "" ? $photoUrl : $building->photo ),
+                'date' => $building->created_at
             );
         }
         return $data;
