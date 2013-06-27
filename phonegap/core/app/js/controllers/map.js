@@ -13,9 +13,8 @@ initApp.controller('mapController', function ($scope, geolocation, camera, devic
 
 	   });
 
-	   
-	 };
 
+	 };
 	 $scope.mapLocation();
 
 
