@@ -4,7 +4,7 @@
 			<img class="photo" ng-src="{{photo}}"/>
 			<div class="data-content-position data-content-tag">
 				<div class="picture-bottom">
-					<h3 ng-show="wait" class="caption">
+					<h3 ng-show="wait" class="caption caption-loading">
 						Cargando imagen
 					</h3>
 					<h3 ng-hide="wait" class="caption">
@@ -22,7 +22,7 @@
 		</div>
 		<div ng-hide="wait" class="bottom-buttons">
 		   <div class="big-button art"></div>
-	       <a class="next-button" href="" ng-click="submitPoint()"><span class="caption">Siguiente</span><span class="arrow"></span></a>
+	       <a class="next-button" href="" ng-click="submitPoint()"><span class="caption">Enviar</span><span class="arrow"></span></a>
 	    </div>
 	</div>
 </form>
