@@ -3,9 +3,10 @@
 		<img ng-src="{{point.photo}}"/>
 		<div class="data-content-position">
 			<div class="data-content-position-info">
-				<h3>User</h3>
+				<h3>{{point.name}}</h3>
 				<span>{{point.tags}} </span>
-				<span>Fecha</span>
+				<span>{{point.category}}</span>
+				<span class="data-min">Por {{point.author}} <span class="data-min-minutes">{{point.date | fromNow}}</span></span>
 			</div>
 			<div class="bottom-buttons">
 			   <div class="big-button discover-icon"></div>

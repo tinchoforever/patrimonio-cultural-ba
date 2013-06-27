@@ -489,6 +489,7 @@ a,input {
 	height: 80px;
 	display: block;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .discover li a .discover-img img{
@@ -554,14 +555,24 @@ a,input {
 	font: bold 15px/15px Arial;
 	text-transform: uppercase;
 	color: #ffd512;
-	padding: 0 5px 0 0;
+	padding: 0 0 5px;
 }
 
 .discover-detail .data-content-position span{
-	font: bold 15px/15px Arial;
+	font: bold 15px/18px Arial;
 	display: block;
 	text-transform: uppercase;
 	color: #fff;
+}
+
+.discover-detail .data-content-position span.data-min{
+	font: bold 11px/16px Arial;
+}
+
+.discover-detail .data-content-position span.data-min .data-min-minutes{
+	font: normal 11px/16px Arial;
+	display: inline;
+	text-transform: lowercase;
 }
 
 .discover-detail .data-content-position .bottom-buttons{
