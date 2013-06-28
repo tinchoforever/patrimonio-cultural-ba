@@ -8,8 +8,8 @@ angular.module('App.controllers',  ['google-maps', 'LocalStorageModule', 'App.se
     // create a map in the "map" div, set the view to a given place and zoom
     var map = L.map('map', {
         center: [49,14],
-        minZoom: 3,//12
-        zoom: 10,//15
+        minZoom: 12,
+        zoom: 15,
         whenReady: function(){
             console.log("map ready");
             return this;
