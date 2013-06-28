@@ -5,32 +5,124 @@
 }
 
 .logo h3 {
-    color: #fff;
-    font-size: 22px;
+    color: #e1e1e1;
+    font-size: 0px;
     line-height: 60px;
     padding: 0;
+    background: url(../../img/logo-mapart.png) no-repeat 0 14px;
+}
+
+.search-module {
+    background-color: #ffd513;
+    height: 145px;
+    margin-bottom: 25px;
+    padding: 35px 20px 30px;
+}
+
+.search-module p {
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.search-module li .field .input.search {
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+}
+
+.results-module {
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 40px;
+}
+
+.results-module p {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.results-module p span {
+    font-weight: bold;
 }
 
 .gallery-list {
-    border: 1px solid #ccc;
     border-top: 0;
 }
 .gallery-list li {
-    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     overflow: hidden;
     width: 100%;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    position: relative;
 }
 .gallery-list li img {
     display: block;
     float: left;
-    max-height: 200px;
-    max-width: 200px;
-    width: 25%;
+    height: 162px;
+    width: 162px;
+    margin-right: 12px;
 }
-.gallery-list li h3 {
-    color: #000;
+
+.gallery-list li img.location {
+    width: 242px;
+    margin-right: 25px;
+}
+
+.gallery-list li h3 a,
+.gallery-list li h4 a,
+.gallery-list li h6 a,
+.gallery-list li span{
     float: left;
-    font: bold 16px 'Helvetica Neue', Helvetica, sans-serif;
-    padding: 10px;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
     width: 50%;
+    padding: 0;
+    color: #000;
+    text-decoration: none;
 }
+
+.gallery-list li h3 {
+    text-transform: uppercase;
+    letter-spacing: -.05em;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.gallery-list li h4 a {
+    color: #a7a7a2;
+    font-size: 16px;
+    
+}
+
+.gallery-list li h6 a {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.gallery-list li span {
+    font-weight: normal;
+    font-size: 12px;
+    position: absolute;
+    bottom: 13px;
+    left: 47%;
+}
+
+.gallery-list li a.arrow-link {
+    background: url(../img/arrow-art-list.png) no-repeat;
+    position: absolute;
+    top: 40%;
+    width: 22px;
+    height: 31px;
+    left: 918px;
+}
+
+
+
+

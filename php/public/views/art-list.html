@@ -1,17 +1,34 @@
 <div class="row">
-  <div class="twelve columns">
-    <ul >
-      <li class="field">
-        <input class="large search input" type="search" placeholder="Que obra urbana queres buscar?" ng-model="query">
+    <div class="twelve columns">
+        <ul class="search-module">
+            <li class="field">
+                <p>Que obra urbana queres buscar?</p>
+                <input class="large search input" type="search" ng-model="query">
+            </li>
         </ul>
 
-    <ul class="gallery-list">
-      <li ng-repeat="point in points | filter:query">
-        <img class="picture" ng-src={{point.photo}}>
-        <img class="location" ng-src={{point.map}}>
-         <h3> {{point.name}}</h3>
-        <h6> {{point.tags}} </h6>
-      </li>
-    </ul>
-  </div>
+        <div class="results-module">
+            <p>Mostrando resultados para <span>Monumentos</span></p>
+        </div>
+
+
+        <ul class="gallery-list">
+            <li ng-repeat="point in points | filter:query">
+                <img class="picture" ng-src={{point.photo}}>
+                <img class="location" ng-src={{point.map}}>
+                
+
+                <!-- <h3> {{point.name}}</h3>
+                <h6> {{point.tags}} </h6> -->
+
+                <h3><a href="#">Escultura Sarmiento</a></h3>
+                <h4><a href="#">por GCBA</a></h4>
+                <h6><a href="">monumentos</a></h6>
+                <span>Hace 29 minutos</span>
+                <a href="" class="arrow-link"></a>
+            </li>
+        </ul>
+
+
+    </div>
 </div>
