@@ -9,7 +9,7 @@ angular.module('App.controllers',  ['google-maps', 'LocalStorageModule', 'App.se
     var map = L.map('map', {
         center: [49,14],
         minZoom: 12,
-        zoom: 15,
+        zoom: 20,
         whenReady: function(){
             console.log("map ready");
             return this;
