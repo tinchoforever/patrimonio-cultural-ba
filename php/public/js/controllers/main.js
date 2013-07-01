@@ -24,7 +24,7 @@ angular.module('App.controllers',  ['google-maps', 'LocalStorageModule', 'App.se
 
 
     // add an OpenStreetMap tile layer
-    L.tileLayer('http://localhost/tiles/{z}/{x}/{y}.png').addTo(map);
+    L.tileLayer('http://{s}.tiles.mapbox.com/v3/examples.map-vyofok3q/{z}/{x}/{y}.png').addTo(map);
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(g){
