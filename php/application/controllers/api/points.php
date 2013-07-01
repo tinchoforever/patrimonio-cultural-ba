@@ -76,8 +76,10 @@ class Api_Points_Controller extends Base_Controller {
         $oneKMDiffLng = 1 / (111.32 * cos($lat));
         $minLat = $lat - $oneKMDiffLat;
         $maxLat = $lat + $oneKMDiffLat;
-        $minLng = $lon - $oneKMDiffLng;
-        $maxLng = $lon + $oneKMDiffLng;
+        $minLng = $lon + $oneKMDiffLng;
+        $maxLng = $lon - $oneKMDiffLng;
+
+
 
         $buildings = Building::where_between('lat', $minLat, $maxLat)
             ->where_between('lng', $minLng, $maxLng)
