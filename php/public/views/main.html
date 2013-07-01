@@ -1,3 +1,5 @@
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+
 <style>
   body,h1,h2,h3,h4,h5,h5,ul,li,p {margin: 0; padding: 0;}
 
@@ -9,11 +11,14 @@
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
             border-radius: 10px;
-    width: 347px;
+    min-width: 347px;
+    min-height: 220px;
   }
 
   .leaflet-popup-content {
-    margin: 25px 30px 11px 12px;
+    margin: 25px 15px 11px;
+    max-width: 500px;
+    position: relative;
   }
 
   a.leaflet-popup-close-button {
@@ -22,13 +27,17 @@
 
   .pic-container {}
 
+  .pic-container img {
+    min-width: 320px;
+  }
+
   .pic-container .pic-title {
     background-image: url(../img/arrow-location.png);
     background-repeat: no-repeat;
     background-position: 13px 20px;
     position: absolute;
-    bottom: 36px;
-    width: 320px;
+    bottom: 5px;
+    width: 100%;
     padding: 23px 15px 5px 50px;
     background-color: rgba(0,0,0,.5);
   }
@@ -58,14 +67,16 @@
 <!-- New map -->
 <div id="map"></div>
 
-<div ng-show="popup" class="" style="bottom: 40%; left:40%; position: absolute;">
-  <div class="pic-container">
-    <div class="pic-title">
-      <h2>{{currentPoint.name}}</h2>
-      <p>{{currentPoint.tags}}</p>
-      <p>{{currentPoint.author}}</p>
+<div ng-show="popup" class="leaflet-popup-content-wrapper" style="bottom: 40%; left:40%; position: absolute;">
+  <div class="leaflet-popup-content">
+    <div class="pic-container">
+      <div class="pic-title">
+        <h2>{{currentPoint.name}}</h2>
+        <p>{{currentPoint.tags}}</p>
+        <p>{{currentPoint.author}}</p>
+      </div>
+      <img src="{{currentPoint.photo}}" alt="" />
     </div>
-    <img src="{{currentPoint.photo}}" alt="" />
   </div>
 </div>
 
