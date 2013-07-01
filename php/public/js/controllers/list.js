@@ -2,14 +2,14 @@
 angular.module('App.controllers')
 .controller('list', ['$scope', 'localStorageService', 'points', function ($scope, localStorageService, points) {
 
-    $scope.wait = false;
+    $scope.wait = true;
+    
     $scope.update =function(){
-        $scope.wait = true;
+        //$scope.wait = true;
         points.search($scope.q, function (points) {
             $scope.points = points;
             $scope.wait = false;
         });
     };
-
 
 }]);
