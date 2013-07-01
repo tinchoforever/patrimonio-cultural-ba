@@ -22,6 +22,18 @@ angular.module('App.services', ['LocalStorageModule', 'ngResource'])
             self.points = data;
             successCallback(data);
           });
+       },
+       search: function (q,successCallback) {
+          self = this;
+          $http.get('/api/v1/points/search?q=' + q ).success(function (data) {
+            for (var i = 0;i <data.length; i++) {
+                var point = data[i];
+                point.map = "http://staticmap.openstreetmap.de/staticmap.php?center=" + point.latitude + ',' +point.longitude + "&zoom=20&size=300x200&maptype=mapnik&markers="+ point.latitude + ',' +point.longitude +",lightblue1";
+
+            };
+            self.points = data;
+            successCallback(data);
+          });
        }
      };
     }

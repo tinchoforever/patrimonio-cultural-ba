@@ -58,6 +58,15 @@ class Api_Points_Controller extends Base_Controller {
         }
         return Response::json($data);
     }
+    public function get_allsearch()
+    {
+        $data = array();
+        $q = Input::get('q');
+         if ($q) {
+            $data = Api_Points_Controller::searchBuildings($q);
+        }
+        return Response::json($data);
+    }
 
     //TODO: MOVE TO SERVICE
     public function getBuildingsByGeo($lat,$lon, $count=20){
@@ -92,6 +101,23 @@ class Api_Points_Controller extends Base_Controller {
                 ->order_by('id', 'desc')
                 ->take($count)
                 ->get();
+        return Api_Points_Controller::processBuildings($buildings);
+
+    }
+
+    public function searchBuildings($key,$count=100){
+        $key = '%'.$key.'%';
+        $query = Building::with(array('messages'))
+                // ->or_where('messages.text','like', $key)
+                ->or_where('name', 'like', $key)
+                ->or_where('category', 'like', $key)
+                ->where('lng', '<>', 1)
+                ->where('lat', '<>', "")
+                ->where('lng', '<>', "")
+                ->order_by('id', 'desc')
+                ->take($count);
+
+        $buildings = $query->get();
         return Api_Points_Controller::processBuildings($buildings);
 
     }

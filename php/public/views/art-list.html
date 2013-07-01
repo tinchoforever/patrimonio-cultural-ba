@@ -3,17 +3,22 @@
         <ul class="search-module">
             <li class="field">
                 <p>Que obra urbana queres buscar?</p>
-                <input class="large search input" type="search" ng-model="query">
+                <input placeholder=" 'Grafitti', 'Murales'" class="xlarge search input" type="search" ng-model="q" ng-model-onblur ng-change="update()"
             </li>
         </ul>
-
-        <div class="results-module">
-            <p>Mostrando resultados para <span>Monumentos</span></p>
+        <div ng-show="wait" class="results-module">
+            <p> Buscando obras para <strong>{{q}}</strong> </p>
+        </div>
+        <div ng-hide="wait" ng-show="points.length !== 0" class="results-module">
+            <p>Mostrando {{points.length}} resultados para <span>{{q}}</span></p>
+        </div>
+          <div ng-show="points.length === 0" class="results-module">
+             <h1> No hay resultados para <strong>{{q}}</strong> </h1>
+             <h2> Por que no intentar con 'Grafitti', 'Murales'? </h2>
         </div>
 
-
-        <ul class="gallery-list">
-            <li ng-repeat="point in points | filter:query">
+        <ul  ng-show="points.length !== 0"   class="gallery-list">
+            <li ng-repeat="point in points | filter:q">
                 <img class="picture" ng-src={{point.photo}}>
                 <img class="location" ng-src={{point.map}}>
                 <h3><a href="#">{{point.name}}</a></h3>
