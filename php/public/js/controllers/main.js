@@ -31,18 +31,48 @@ angular.module('App.controllers',  ['google-maps', 'LocalStorageModule', 'App.se
           map.setView([g.coords.latitude, g.coords.longitude], 3);
       });
     }
+    points.getall(function (points) {
+        for (var i = 0; i < points.length; i++) {
+            var point = points[i];
+            (function(point){
+            L.marker([point.latitude,point.longitude],{icon: myIcon})
+                 .addTo(map)
+                 .on('click', function(e) {
+                    map.setView([point.latitude,point.longitude], map.getZoom());
+                    $scope.$apply( function(){
+                        $scope.popup = true;
+                        $scope.currentPoint = point;
+                    });
+
+                 });
+            })(point);
+
+        }
+        $scope.points = points;
+    });
+
+
 
     L.marker([-34.603824,-58.379288], {icon: myIcon}).addTo(map).bindPopup('<div class="pic-container"><div class="pic-title"><h2>Avenida del Libertador 3360</h2><p>Monumento de los Españoles</p></div><img src="../img/sample-art.jpg" alt="" /></div>');
-    L.marker([-34.605731,-58.434992], {icon: myIcon}).addTo(map).bindPopup('<div class="pic-container"><div class="pic-title"><h2>Avenida del Libertador 3360</h2><p>Monumento de los Españoles</p></div><img src="../img/sample-art.jpg" alt="" /></div>');
-    L.marker([-34.574218,-58.412418], {icon: myIcon}).addTo(map).bindPopup('<div class="pic-container"><div class="pic-title"><h2>Avenida del Libertador 3360</h2><p>Monumento de los Españoles</p></div><img src="../img/sample-art.jpg" alt="" /></div>');
-    L.marker([-34.618878,-58.370533], {icon: myIcon}).addTo(map).bindPopup('<div class="pic-container"><div class="pic-title"><h2>Avenida del Libertador 3360</h2><p>Monumento de los Españoles</p></div><img src="../img/sample-art.jpg" alt="" /></div>');
+    // L.marker([-34.605731,-58.434992], {icon: myIcon}).addTo(map).bindPopup('<div class="pic-container"><div class="pic-title"><h2>Avenida del Libertador 3360</h2><p>Monumento de los Españoles</p></div><img src="../img/sample-art.jpg" alt="" /></div>');
+    // L.marker([-34.574218,-58.412418], {icon: myIcon}).addTo(map).bindPopup('<div class="pic-container"><div class="pic-title"><h2>Avenida del Libertador 3360</h2><p>Monumento de los Españoles</p></div><img src="../img/sample-art.jpg" alt="" /></div>');
+    // L.marker([-34.618878,-58.370533], {icon: myIcon}).addTo(map).bindPopup('');
 
 
     map.setZoom(15);
 
+    map.on('click', function(){
 
+         $scope.$apply( function(){
+              $scope.popup = false;
+         });
+    });
+    map.on('drag', function(){
+         $scope.$apply( function(){
+              $scope.popup = false;
+         });
+    });
 
-   // add a marker in the given location, attach some popup content to it and open the popup
 
 
 }]);

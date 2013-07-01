@@ -56,6 +56,18 @@
 </div>
 
 <!-- New map -->
-    <div id="map"></div>
+<div id="map"></div>
+
+<div ng-show="popup" class="" style="bottom: 40%; left:40%; position: absolute;">
+  <div class="pic-container">
+    <div class="pic-title">
+      <h2>{{currentPoint.name}}</h2>
+      <p>{{currentPoint.tags}}</p>
+      <p>{{currentPoint.author}}</p>
+    </div>
+    <img src="{{currentPoint.photo}}" alt="" />
+  </div>
+</div>
+
 
 
