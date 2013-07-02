@@ -3,24 +3,28 @@
         <ul class="search-module">
             <li class="field">
                 <p>Que obra urbana queres buscar?</p>
-                <input placeholder=" 'Grafitti', 'Murales'" class="xlarge search input" type="search" ng-model="q" ng-model-onblur ng-change="update()"
+                <span class="input-field-container">
+                    <input placeholder=" 'Grafitti', 'Murales'" class="xlarge search input" type="search" ng-model="q" ng-model-onblur ng-change="update()" />
+                </span>
             </li>
         </ul>
-        <div ng-show="wait" class="results-module">
+        <div ng-hide="wait || q.length === 0" class="searching-module">
             <p> Buscando obras para <strong>{{q}}</strong> </p>
         </div>
-        <div ng-hide="wait" ng-show="points.length !== 0" class="results-module">
+
+        <div ng-hide="wait || points.length === 0 || q.length === 0" class="results-module">
             <p>Mostrando {{points.length}} resultados para <span>{{q}}</span></p>
         </div>
-          <div ng-show="points.length === 0" class="results-module">
+
+        <div  ng-hide="wait || points.length !== 0 || q.length === 0" class="results-module">
              <h1> No hay resultados para <strong>{{q}}</strong> </h1>
-             <h2> Por que no intentar con 'Grafitti', 'Murales'? </h2>
+             <h2> Por que no intentar con <strong>'Grafitti'</strong>, <strong>'Murales'</strong>? </h2>
         </div>
 
-        <ul  ng-show="points.length !== 0"   class="gallery-list">
+        <ul ng-show="points.length !== 0"   class="gallery-list">
             <li ng-repeat="point in points | filter:q">
-                <img class="picture" ng-src={{point.photo}}>
-                <img class="location" ng-src={{point.map}}>
+                <a href="#"><img class="picture" ng-src={{point.photo}}></a>
+                <a href="#"><img class="location" ng-src={{point.map}}></a>
                 <h3><a href="#">{{point.name}}</a></h3>
                 <h4><a href="#">por GCBA</a></h4>
                 <h6><a href="">{{point.tags}}</a></h6>
