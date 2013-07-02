@@ -42,9 +42,6 @@ Route::get('api/v1/points/search/(:any?)', array('as' => 'api.points', 'uses' =>
 Route::any('api/v1/points/create/(:any?)', array('as' => 'api.points', 'uses' => 'api.points@create'));
 Route::any('api/v1/points/upload/(:any?)', array('as' => 'api.points', 'uses' => 'api.points@upload'));
 
-Route::any('api/v1/photo/upload',array('as' => 'api.points', 'uses' => 'api.points@testupload'));
-
-
 
 /*
 |--------------------------------------------------------------------------
