@@ -29,8 +29,10 @@ angular.module('initApp.services', ['LocalStorageModule', 'ngResource'])
     getAllNear: function(point, callback){
       this.points = [];
       var self = this;
-      // var service = 'http://localhost:1984/api/v1/points/take/10';
-      var service ='http://192.168.1.233:1984/api/v1/points/take/10';
+      var service ='http://192.168.1.233:1984/api/v1/points/geo/all';
+      if (this.location){
+        service+= "?ll=" + this.location.latitude + "," + this.location.longitude;
+      }
       $http.get(service).success(function(data){
         self.points = data;
         callback(self.points);
