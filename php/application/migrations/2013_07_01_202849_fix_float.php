@@ -11,8 +11,8 @@ class Fix_Float {
 	{
 		Schema::table('buildings', function($table) {
 
-			$table->decimal('lat', 10, 7);
-			$table->decimal('lng',10, 7);
+			// $table->decimal('lat',10, 7);
+			// $table->decimal('lng',10, 7);
 
         });
 	}

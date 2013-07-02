@@ -11,8 +11,9 @@ class Add_Remove_Col {
 	{
 		Schema::table('buildings', function($table) {
 
-			$table->drop_column('lat');
-			$table->drop_column('lng');
+			$table->decimal('latitude', 10, 7);
+			$table->decimal('longitude',10, 7);
+
 
         });
 	}
