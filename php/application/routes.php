@@ -32,6 +32,8 @@
 |
 */
 Route::controller(Controller::detect());
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"');
 
 Route::get('/', array('as' => 'home', 'uses' => 'home@index'));
 
