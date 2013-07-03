@@ -36,6 +36,7 @@
     <access origin="http://openstreetmap.de" />
     <access origin="http://debug.phonegap.com" />
     <access origin="http://192.168.1.233" />
+    <access origin="http://mapart.herokuapp.com" />
     <access subdomains="true" uri="http://openstreetmap.de*" />
     <access subdomains="true" uri="http://debug.phonegap.com*" />
     <access subdomains="true" uri="*" />
@@ -43,6 +44,8 @@
     <access subdomains="true" uri="*.phonegap.*" />
     <access subdomains="true" uri="*192.168.1.233*" />
     <access subdomains="true" uri="*.openstreetmap.*" />
+    <access subdomains="true" uri="*mapart.herokuapp.com.*" />
+
 
 
 </widget>

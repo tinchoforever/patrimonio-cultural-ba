@@ -11,15 +11,15 @@
       controller: 'takePhotoController'
     }).when('/confirm-photo', {
       templateUrl: 'views/take-photo.html',
-      controller: 'pointController'
+      controller: 'takePhotoController'
     })
     .when('/show-map', {
       templateUrl: 'views/show-map.html',
-      controller: 'pointController'
+      controller: 'showMapController'
     })
      .when('/tag', {
       templateUrl: 'views/tag-point.html',
-      controller: 'pointController'
+      controller: 'tagController'
     })
     .when('/finish', {
       templateUrl: 'views/finish.html',

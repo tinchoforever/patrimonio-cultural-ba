@@ -37,7 +37,7 @@
       <a class="toggle" gumby-trigger="#nav3 &gt; .row &gt; ul" href="#"><i class="icon-menu"></i></a>
       <h1 class="four columns logo">
         <a href="#">
-          <h3> MapArt</h3>
+          <h3>MapArt</h3>
         </a>
       </h1>
       <ul class="eight columns">

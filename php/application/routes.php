@@ -32,12 +32,15 @@
 |
 */
 Route::controller(Controller::detect());
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"');
 
 Route::get('/', array('as' => 'home', 'uses' => 'home@index'));
 
 Route::get('api/v1/points/all', array('as' => 'api.points', 'uses' => 'api.points@all'));
 Route::get('api/v1/points/take/(:any?)', array('as' => 'api.points', 'uses' => 'api.points@take'));
 Route::get('api/v1/points/geo/all', array('as' => 'api.points', 'uses' => 'api.points@allgeolocated'));
+Route::get('api/v1/points/search/(:any?)', array('as' => 'api.points', 'uses' => 'api.points@allsearch'));
 Route::any('api/v1/points/create/(:any?)', array('as' => 'api.points', 'uses' => 'api.points@create'));
 Route::any('api/v1/points/upload/(:any?)', array('as' => 'api.points', 'uses' => 'api.points@upload'));
 
