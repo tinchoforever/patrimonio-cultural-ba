@@ -7,7 +7,8 @@ angular.module('App.controllers',  ['google-maps', 'LocalStorageModule', 'App.se
 
     // create a map in the "map" div, set the view to a given place and zoom
     var map = L.map('map', {
-        center: [49,14],
+        //center: [49,14],
+        center: [-34.603824,-58.379288],
         minZoom: 12,
         zoom: 15,
         whenReady: function(){
@@ -40,7 +41,7 @@ angular.module('App.controllers',  ['google-maps', 'LocalStorageModule', 'App.se
     L.marker([-34.61887,-58.370533]).addTo(map).bindPopup('<div class="pic-container"><div class="pic-title"><h2>Avenida del Libertador 3360</h2><p>Monumento de los Españoles</p></div><img src="../img/sample-art.jpg" alt="" /></div>');
 
 
-    map.setZoom(15);
+    map.setZoom(12);
 
 
 
